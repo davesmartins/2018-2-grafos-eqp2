@@ -1,33 +1,46 @@
 import java.util.Scanner;
 
-public class Menu(){
+public class Menu {
 
 
     private int opcao;
-    private int aresta;
-    private int vertice;
+    private String nomeAresta;
+    private String nomeVertice;
+    private String verticeSaida;
+    private String verticeEntrada;
 
-    Scanner ler = new Scanner(System.in);
-    Scanner lerA = new Scanner(System.in);
-    Scanner lerV = new Scanner(System.in);
+
+    Scanner lerOP = new Scanner(System.in);
+    Scanner lerNV = new Scanner(System.in);
+    Scanner lerNA = new Scanner(System.in);
+    Scanner lerVS = new Scanner(System.in);
+    Scanner lerVE = new Scanner(System.in);
+	
 
 
 
     public void menuOp() {
-        System.out.printf("1 - Criar Aresta \n 2 - Criar Vertice \n 3 - Exibir Grafo \n");
+        System.out.printf("1 - Criar Vertice \n 2 - Criar Aresta \n 3 - Exibir Grafo \n");
         System.out.printf("Informe o numero desejado: ");
-        this.opcao = ler.nextInt();
+        this.opcao = lerOP.nextInt();
     }
 
     switch(opcao){
         case 1:
-        System.out.println("Digite numero de Aresta: ");
-        this.aresta = lerA.nextInt();
+        System.out.println("Digite o nome de Vertice: ");
+        this.nomeVertice = lerNV.nextInt();
         menuOp();
         break;
         case 2:
-        System.out.println("Digite numero de Vertice: ");
-        this.vertice = lerV.nextInt();
+        System.out.println("Digite o nome de Aresta: ");
+        this.nomeAresta = lerNA.nextInt();
+
+	    System.out.println("Digite o vertice de saida de Aresta: ");
+	    this.verticeSaida = lerVS.nextInt();
+	
+	    System.out.println("Digite o vertice de entrada de Aresta: ");
+	    this.verticeEntrada = lerVE.nextInt();
+
         menuOp();
         break;
         case 3:
