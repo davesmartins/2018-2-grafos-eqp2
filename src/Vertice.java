@@ -2,7 +2,7 @@ public class Vertice {
     private String nome;
 
     public void Vertice(String nome){
-        setNome(nome);
+        this.setNome(nome);
     }
 
     public String getNome() {
