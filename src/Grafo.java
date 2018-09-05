@@ -68,7 +68,7 @@ public class Grafo {
         return ordem;
     }
 
-    public int getMatrizIncidenteFull(){
+    public int[][] getMatrizIncidenteFull(){
         return this.matrizIncidente;
     }
 
