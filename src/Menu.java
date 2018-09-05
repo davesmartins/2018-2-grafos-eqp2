@@ -20,7 +20,7 @@ public class Menu {
 
 
     public void menuOp() {
-        System.out.printf("1 - Criar Vertice \n 2 - Criar Aresta \n 3 - Exibir Grafo \n");
+        System.out.printf("1 - Criar Vertice \n 2 - Criar Aresta \n 3 - Exibir Grafo \n 0 - Sair");
         System.out.printf("Informe o numero desejado: ");
         this.opcao = lerOP.nextInt();
     }
@@ -46,7 +46,9 @@ public class Menu {
         case 3:
         imprimeGrafo();
         break;
-
+        default:
+            System.out.println("Opção inválida.");
+    }
         }
 
     public int getAresta() {

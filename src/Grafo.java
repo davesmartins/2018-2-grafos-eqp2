@@ -9,11 +9,11 @@ public class Grafo {
     private boolean orientada;
 
     public void GrafoOrientado(ArrayList<Vertice> vertices, ArrayList<Aresta> arestas){
-        for(int i = 0, i<vertices.size(), i++){
+        for(int i = 0; i<vertices.size(); i++){
             this.adicionaVertice(vertices.get(i));
         }
 
-        for(int j = 0, j<arestas.size(), j++){
+        for(int j = 0; j<arestas.size(); j++){
             this.adicionaAresta(arestas.get(j));
         }
 
@@ -21,11 +21,11 @@ public class Grafo {
     }
 
     public void GrafoNaoOrientado(ArrayList<Vertice> vertices, ArrayList<Aresta> arestas){
-        for(int i = 0, i<vertices.size(), i++){
+        for(int i = 0; i<vertices.size(); i++){
             this.adicionaVertice(vertices.get(i));
         }
 
-        for(int j = 0, j<arestas.size(), j++){
+        for(int j = 0; j<arestas.size(); j++){
             this.adicionaAresta(arestas.get(j));
         }
 
