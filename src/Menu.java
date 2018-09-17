@@ -15,13 +15,15 @@ public class Menu {
     Scanner lerNA = new Scanner(System.in);
     Scanner lerVS = new Scanner(System.in);
     Scanner lerVE = new Scanner(System.in);
+
+    Grafo grafo = new Grafo();
 	
 
 
 
     public void menuOp() {
-        System.out.printf("1 - Criar Vertice \n 2 - Criar Aresta \n 3 - Exibir Grafo \n 0 - Sair");
-        System.out.printf("Informe o numero desejado: ");
+        System.out.printf(" 1 - Criar Vertice \n 2 - Criar Aresta \n 3 - Exibir Grafo \n 0 - Sair");
+        System.out.printf("\n Informe o numero desejado: ");
         this.opcao = lerOP.nextInt();
 
 
@@ -29,6 +31,9 @@ public class Menu {
             case 1:
                 System.out.println("Digite o nome de Vertice: ");
                 this.nomeVertice = lerNV.next();
+                Vertice vertice = new Vertice();
+                vertice.setNome(this.getNomeAresta());
+                grafo.adicionaVertice(vertice);
                 menuOp();
                 break;
             case 2:
@@ -41,11 +46,14 @@ public class Menu {
                 System.out.println("Digite o vertice de entrada de Aresta: ");
                 this.verticeEntrada = lerVE.next();
 
+                Aresta aresta = new Aresta();
+                aresta.setNome(this.getNomeAresta());
+                aresta.setVertice1(this.getVerticeSaida());
+                aresta.setVertice2(this.getVerticeEntrada());
+                grafo.adicionaAresta(aresta);
                 menuOp();
                 break;
             case 3:
-
-                Grafo grafo = new Grafo();
                 grafo.imprimeGrafo();
 
                 break;
@@ -69,5 +77,21 @@ public class Menu {
 
     public void setVerticeEntrada(String verticeEntrada) {
         this.verticeEntrada = verticeEntrada;
+    }
+
+    public String getNomeAresta() {
+        return nomeAresta;
+    }
+
+    public String getNomeVertice() {
+        return nomeVertice;
+    }
+
+    public String getVerticeSaida() {
+        return verticeSaida;
+    }
+
+    public String getVerticeEntrada() {
+        return verticeEntrada;
     }
 }
