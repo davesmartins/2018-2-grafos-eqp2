@@ -5,8 +5,13 @@ public class Grafo {
     private int ordem = 0;
     private ArrayList<Aresta> aresta = new ArrayList<Aresta>();
     private ArrayList<Vertice> vertice = new ArrayList<Vertice>();
-    private int[][] matrizIncidente;
+  //  private int[][] matrizIncidente;
     private boolean orientada;
+
+    public String toString(){
+
+        return "oi";
+    }
 
     public void GrafoOrientado(ArrayList<Vertice> vertices, ArrayList<Aresta> arestas){
         for(int i = 0; i<vertices.size(); i++){
@@ -18,6 +23,40 @@ public class Grafo {
         }
 
         this.setOrientada(true);
+    }
+
+
+
+    public ArrayList<String> printMatriz(){
+
+            int[][] mat = armazenarGrafo();
+            ArrayList<String> lista = mew ArrayList<>();
+            for (int linha =0; linha < getOrdem(); linha++){
+                String linha = "";
+                for(int coluna=0; coluna < aresta.size(); coluna++ ){
+                    linha += mat[linha][coluna]+" ";
+                }
+                lista.add(linha);    
+            }
+            return lista
+
+    }
+
+    public int getGrau(Vertice v){
+int cont = 0;
+        for(Aresta a: aresta){
+            if ( v.getNome().equals( a.getVertice1().getNome() ) ||
+                 v.getNome().equals( a.getVertice2().getNome() )){
+                    cont++;
+            }
+
+        }
+        return cont;
+    }
+
+    public int getOrdem(){
+
+        return vertice.size();
     }
 
     public void GrafoNaoOrientado(ArrayList<Vertice> vertices, ArrayList<Aresta> arestas){
@@ -69,19 +108,19 @@ public class Grafo {
     }
 
     public int[][] getMatrizIncidenteFull(){
-        return this.matrizIncidente;
+        return armazenarGrafo();
     }
 
     public int getMatrizIncidente(int i, int j) {
-        return this.matrizIncidente[i][j];
+        return armazenarGrafo()[i][j];
     }
 
     public void setMatrizIncidente(int i, int j, int v){
         this.matrizIncidente[i][j] = v;
     }
 
-    public void armazenarGrafo(){
-        this.matrizIncidente = new int[this.getOrdem()][this.getGrau()];
+    public int[][] armazenarGrafo(){
+        int [][] matrizIncidente = new int[this.getOrdem()][this.getGrau()];
 
         if(this.isOrientada()) {
             for (int i = 0; i < this.getOrdem(); i++) {
@@ -108,6 +147,7 @@ public class Grafo {
                 }
             }
         }
+        return matrizIncidente;
     }
 
     public void imprimeGrafo(){
