@@ -1,17 +1,10 @@
 import java.util.ArrayList;
 
 public class Grafo {
-    private int grau = 0;
-    private int ordem = 0;
     private ArrayList<Aresta> aresta = new ArrayList<Aresta>();
     private ArrayList<Vertice> vertice = new ArrayList<Vertice>();
   //  private int[][] matrizIncidente;
     private boolean orientada;
-
-    public String toString(){
-
-        return "oi";
-    }
 
     public void GrafoOrientado(ArrayList<Vertice> vertices, ArrayList<Aresta> arestas){
         for(int i = 0; i<vertices.size(); i++){
@@ -25,12 +18,10 @@ public class Grafo {
         this.setOrientada(true);
     }
 
-
-
     public ArrayList<String> printMatriz(){
 
             int[][] mat = armazenarGrafo();
-            ArrayList<String> lista = mew ArrayList<>();
+            ArrayList<String> lista = new ArrayList<>();
             for (int linha =0; linha < getOrdem(); linha++){
                 String linha = "";
                 for(int coluna=0; coluna < aresta.size(); coluna++ ){
@@ -38,18 +29,16 @@ public class Grafo {
                 }
                 lista.add(linha);    
             }
-            return lista
-
+            return lista;
     }
 
     public int getGrau(Vertice v){
-int cont = 0;
+        int cont = 0;
         for(Aresta a: aresta){
             if ( v.getNome().equals( a.getVertice1().getNome() ) ||
                  v.getNome().equals( a.getVertice2().getNome() )){
                     cont++;
             }
-
         }
         return cont;
     }
@@ -80,31 +69,11 @@ int cont = 0;
     }
 
     public void adicionaAresta(Aresta a){
-        int i = this.getGrau() + 1;
         aresta.add(a);
-        this.setGrau(i);
     }
 
     public void adicionaVertice(Vertice v){
-        int i = this.getOrdem() + 1;
         vertice.add(v);
-        this.setOrdem(i);
-    }
-
-    public void setGrau(int grau) {
-        this.grau = grau;
-    }
-
-    public void setOrdem(int ordem) {
-        this.ordem = ordem;
-    }
-
-    public int getGrau() {
-        return grau;
-    }
-
-    public int getOrdem() {
-        return ordem;
     }
 
     public int[][] getMatrizIncidenteFull(){
