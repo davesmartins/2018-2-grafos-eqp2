@@ -1,13 +1,13 @@
 public class Aresta {
     private String nome;
-    private Vertice vertice1;
-    private Vertice vertice2;
+    private Vertice verticesaida;
+    private Vertice verticechegada;
 
 
     public void Aresta(Vertice vertice1, Vertice vertice2, String nome){
         this.setNome(nome);
-        this.setVertice1(vertice1);
-        this.setVertice2(vertice2);
+        this.setVerticeSaida(vertice1);
+        this.setVerticeChegada(vertice2);
     }
 
     public String getNome() {
@@ -18,19 +18,19 @@ public class Aresta {
         this.nome = nome;
     }
 
-    public void setVertice1(Vertice vertice1) {
-        this.vertice1 = vertice1;
+    public Vertice getVerticeChegada() {
+        return verticechegada;
     }
 
-    public void setVertice2(Vertice vertice2) {
-        this.vertice2 = vertice2;
+    public void setVerticeChegada(Vertice vertice2) {
+        this.verticechegada = vertice2;
     }
 
-    public Vertice getVertice2() {
-        return vertice2;
+    public void setVerticeSaida(Vertice vertice1) {
+        this.verticesaida = vertice1;
     }
 
-    public Vertice getVertice1() {
-        return vertice1;
+    public Vertice getVerticeSaida() {
+        return verticesaida;
     }
 }
