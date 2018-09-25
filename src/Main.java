@@ -4,7 +4,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        for (int i = 1; i == 0; i++) {
+        for (int i = 1; i != 0; i++) {
             i = menu();
         }
     }
@@ -39,10 +39,11 @@ public class Main {
                 System.out.printf("\n Informe o nome do Vertice: ");
                 nomeVertice = lerNewVertice.next();
                 boolean igual = false;
+                int x = vertices.size();
 
-                if (vertices.size() != 0) {
+                if (x != 0) {
                     for (Vertice v : vertices) {
-                        if (nomeVertice == v.getNome()) {
+                        if (nomeVertice.contains(v.getNome())) {
                             igual = true;
                         }
                     }
@@ -100,15 +101,15 @@ public class Main {
             case 4:
                 ArrayList<String> matriz = new ArrayList<String>();
                 matriz = grafo.printMatriz();
-                for(int i = 0; i < matriz.size(); i++){
-                    System.out.println(matriz.get(i)+"\n");
+                for (int i = 0; i < matriz.size(); i++) {
+                    System.out.println(matriz.get(i) + "\n");
                 }
                 break;
             case 0:
-                resultado = 0;
+                resultado = -1;
                 break;
             default:
-                System.out.printf("\n Digite apenas os números dentro do padrão.");
+                System.out.printf("\n Digite apenas os números dentro do padrão.\n");
 
         }
         return resultado;
