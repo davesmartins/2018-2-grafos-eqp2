@@ -4,7 +4,7 @@ public class Aresta {
     private Vertice verticechegada;
 
 
-    public void Aresta(Vertice vertice1, Vertice vertice2, String nome){
+    public  Aresta(Vertice vertice1, Vertice vertice2, String nome){
         this.setNome(nome);
         this.setVerticeSaida(vertice1);
         this.setVerticeChegada(vertice2);

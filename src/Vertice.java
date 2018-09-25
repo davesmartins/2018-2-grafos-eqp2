@@ -1,7 +1,7 @@
 public class Vertice {
     private String nome;
 
-    public void Vertice(String nome){
+    public  Vertice(String nome){
         this.setNome(nome);
     }
 

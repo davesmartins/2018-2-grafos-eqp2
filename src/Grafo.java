@@ -5,7 +5,7 @@ public class Grafo {
     private ArrayList<Vertice> vertices = new ArrayList<Vertice>();
     private boolean orientada;
 
-    public void Grafo (ArrayList<Aresta> arestas, ArrayList<Vertice> vertices, boolean orientada){
+    public  Grafo (ArrayList<Aresta> arestas, ArrayList<Vertice> vertices, boolean orientada){
         this.arestas = arestas;
         this.vertices = vertices;
         this.setOrientada(orientada);
