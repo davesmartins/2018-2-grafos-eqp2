@@ -81,7 +81,7 @@ public class Grafo {
         while(aresta.charAt(j)!= '/'){
             j++;
         }
-        return aresta.substring(j+1,aresta.length());
+        return aresta.substring(j+1,aresta.length()-1);
     }
     public int getGrau(Vertice v){
         int cont = 0;
