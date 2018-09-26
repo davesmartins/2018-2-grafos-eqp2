@@ -14,17 +14,16 @@ public class Main {
         int opcao;
         String nomeAresta;
         String nomeVertice;
-        String nomeVerticeSaida;
-        String nomeVerticeEntrada;
         boolean orientado;
-        ArrayList<Vertice> vertices = new ArrayList<Vertice>();
-        ArrayList<Aresta> arestas = new ArrayList<Aresta>();
+        ArrayList<String> vertices = new ArrayList<String>();
+        ArrayList<String> arestas = new ArrayList<String>();
+        ArrayList<String> nomeArestas = new ArrayList<String>();
 
         Scanner lerOpcao = new Scanner(System.in);
         Scanner lerNewVertice = new Scanner(System.in);
         Scanner lerNewAresta = new Scanner(System.in);
-        Scanner lerVerticeSaida = new Scanner(System.in);
-        Scanner lerVerticeEntrada = new Scanner(System.in);
+        Scanner lerVerticeOrigem = new Scanner(System.in);
+        Scanner lerVerticeDestino = new Scanner(System.in);
         Scanner lerOrientado = new Scanner(System.in);
 
         Grafo grafo = null;
@@ -41,9 +40,9 @@ public class Main {
                 boolean igual = false;
                 int x = vertices.size();
 
-                if (x != 0) {
-                    for (Vertice v : vertices) {
-                        if (nomeVertice.contains(v.getNome())) {
+                if (x > 0) {
+                    for (int i = 0; i <vertices.size(); i++) {
+                        if (nomeVertice == vertices.get(i) ) {
                             igual = true;
                         }
                     }
@@ -51,35 +50,35 @@ public class Main {
                         System.out.printf("\n Não será possivel criar este vertice, pois já existe um vertice com este nome.");
                     } else {
                         Vertice vertice = new Vertice(nomeVertice);
-                        vertices.add(vertice);
+                        vertices.add(vertice.getNome());
                     }
                 } else {
                     Vertice vertice = new Vertice(nomeVertice);
-                    vertices.add(vertice);
+                    vertices.add(vertice.getNome());
                 }
                 break;
             case 2:
                 System.out.printf("\n Informe o nome da Aresta: ");
                 nomeAresta = lerNewAresta.next();
 
-                System.out.printf("\n Informe o nome do Vertice de Saida: ");
-                nomeVerticeSaida = lerVerticeSaida.next();
-                Vertice vertice1 = null;
-                Vertice vertice2 = null;
-                for (Vertice v1 : vertices) {
-                    if (nomeVerticeSaida == v1.getNome()) {
-                        vertice1 = v1;
+                System.out.printf("\n Informe o nome do Vertice de origem: ");
+                String nomeVerticeOrigem = lerVerticeOrigem.next();
+                String vertice1 = null;
+                String vertice2 = null;
+                for (int i = 0; i <vertices.size(); i++) {
+                    if (nomeVerticeOrigem == vertices.get(i)) {
+                        vertice1 = vertices.get(i);
                     }
                 }
 
                 if (vertice1 == null) {
                     System.out.printf("\n O nome do Vertice informado não existe.");
                 } else {
-                    System.out.printf("\n Informe o nome do Vertice de Entrada: ");
-                    nomeVerticeEntrada = lerVerticeEntrada.next();
-                    for (Vertice v2 : vertices) {
-                        if (nomeVerticeEntrada == v2.getNome()) {
-                            vertice2 = v2;
+                    System.out.printf("\n Informe o nome do Vertice de Destino: ");
+                    String nomeVerticeDestino = lerVerticeDestino.next();
+                    for (int i = 0; i <vertices.size(); i++) {
+                        if (nomeVerticeDestino == vertices.get(i)) {
+                            vertice2 = vertices.get(i);
                         }
                     }
                 }
@@ -88,9 +87,9 @@ public class Main {
                     System.out.printf("\n O nome do Vertice informado não existe.");
                 } else {
                     Aresta aresta = new Aresta(vertice1, vertice2, nomeAresta);
-                    arestas.add(aresta);
+                    arestas.add(aresta.getVerticeOrigem()+"/"+aresta.getVerticeDestino());
+                    nomeArestas.add(aresta.getNome());
                 }
-
                 break;
 
             case 3:
@@ -114,4 +113,5 @@ public class Main {
         }
         return resultado;
     }
+
 }

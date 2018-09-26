@@ -1,13 +1,15 @@
 import java.util.ArrayList;
 
 public class Grafo {
-    private ArrayList<Aresta> arestas = new ArrayList<Aresta>();
-    private ArrayList<Vertice> vertices = new ArrayList<Vertice>();
+    private ArrayList<String> arestas = new ArrayList<String>();
+    private ArrayList<String> vertices = new ArrayList<String>();
+    private ArrayList<String> nomeArestas = new ArrayList<String>();
     private boolean orientada;
 
-    public  Grafo (ArrayList<Aresta> arestas, ArrayList<Vertice> vertices, boolean orientada){
+    public  Grafo (ArrayList<String> arestas, ArrayList<String> vertices, boolean orientada, ArrayList<String> nomeArestas){
         this.arestas = arestas;
         this.vertices = vertices;
+        this.nomeArestas = nomeArestas;
         this.setOrientada(orientada);
     }
 
