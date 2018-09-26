@@ -67,6 +67,22 @@ public class Grafo {
         return matriz;
     }
 
+    public String getVerticeOrigem(ArrayList<String> a, int i){
+        int j = 0;
+        String aresta = a.get(i);
+        while(aresta.charAt(j)!= '/'){
+            j++;
+        }
+        return aresta.substring(0,j-1);
+    }
+    public String getVerticeDestino(ArrayList<String> a, int i){
+        int j = 0;
+        String aresta = a.get(i);
+        while(aresta.charAt(j)!= '/'){
+            j++;
+        }
+        return aresta.substring(j+1,aresta.length());
+    }
     public int getGrau(Vertice v){
         int cont = 0;
         for(int i =0; i<arestas.size(); i++){
