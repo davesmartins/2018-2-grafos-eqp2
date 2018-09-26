@@ -12,4 +12,7 @@ public class Vertice {
     public void setNome(String nome) {
         this.nome = nome;
     }
+
+
+    public Vertice(){}
 }

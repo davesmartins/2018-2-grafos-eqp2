@@ -6,7 +6,7 @@ public class Grafo {
     private ArrayList<String> nomeArestas = new ArrayList<String>();
     private boolean orientada;
 
-    public  Grafo (ArrayList<String> arestas, ArrayList<String> vertices, boolean orientada, ArrayList<String> nomeArestas){
+    public  Grafo (ArrayList<String> arestas, ArrayList<String> vertices, ArrayList<String> nomeArestas, boolean orientada){
         this.arestas = arestas;
         this.vertices = vertices;
         this.nomeArestas = nomeArestas;
@@ -40,10 +40,10 @@ public class Grafo {
         if (this.isOrientada()){
             for (int i = 0; i < this.getOrdem(); i++){
                 for (int j = 0; j < this.arestas.size(); j++){
-                    if (this.arestas.get(j).getVerticeSaida() == this.vertices.get(i)){
+                    if (this.arestas.get(j) == this.vertices.get(i)){
                         matriz[i][j] = 1;
                     }else{
-                        if (this.arestas.get(j).getVerticeChegada() == this.vertices.get(i)){
+                        if (this.arestas.get(j) == this.vertices.get(i)){
                             matriz[i][j] = -1;
                         }else {
                             matriz[i][j] = 0;
@@ -54,8 +54,8 @@ public class Grafo {
         }else{
             for (int i = 0; i < this.getOrdem(); i++){
                 for (int j = 0; j < this.arestas.size(); j++){
-                    if (this.arestas.get(j).getVerticeSaida() == this.vertices.get(i) ||
-                        this.arestas.get(j).getVerticeChegada() == this.vertices.get(i)){
+                    if (this.arestas.get(j) == this.vertices.get(i) ||
+                        this.arestas.get(j) == this.vertices.get(i)){
                         matriz[i][j] = 1;
                     }else{
                         matriz[i][j] = 0;
@@ -69,9 +69,9 @@ public class Grafo {
 
     public int getGrau(Vertice v){
         int cont = 0;
-        for(Aresta a: arestas){
-            if ( v.getNome().equals( a.getVerticeSaida().getNome() ) ||
-                 v.getNome().equals( a.getVerticeChegada().getNome() )){
+        for(int i =0; i<arestas.size(); i++){
+            if ( v.getNome().equals( arestas.get(i) ) ||
+                 v.getNome().equals( arestas.get(i) )){
                     cont++;
             }
         }
@@ -82,19 +82,5 @@ public class Grafo {
         return vertices.size();
     }
 
-    public void adicionaAresta(Aresta a){
-        this.arestas.add(a);
-    }
 
-    public void excluiAresta(Aresta a){
-        this.arestas.remove(a);
-    }
-
-    public void adicionaVertice(Vertice v){
-        this.vertices.add(v);
-    }
-
-    public void excluiVertice(Vertice v){
-        this.vertices.remove(v);
-    }
 }

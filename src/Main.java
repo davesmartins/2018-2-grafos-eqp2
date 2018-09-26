@@ -95,7 +95,7 @@ public class Main {
             case 3:
                 System.out.printf("\n Digite 1(um) se o grafo for orientado e 0(zero) para caso o grafo não seja orientado.");
                 orientado = lerOrientado.nextBoolean();
-                grafo = new Grafo(arestas, vertices, orientado);
+                grafo = new Grafo(arestas, vertices,nomeArestas, orientado);
                 break;
             case 4:
                 ArrayList<String> matriz = new ArrayList<String>();

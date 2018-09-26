@@ -1,7 +1,7 @@
 public class Aresta {
     private String nome;
-    private String verticeOrigem;
-    private String verticeDestino;
+    public String verticeOrigem;
+    public String verticeDestino;
 
 
     public Aresta(String vertice1, String vertice2, String nome) {
@@ -9,6 +9,8 @@ public class Aresta {
         this.setVerticeOrigem(vertice1);
         this.setVerticeDestino(vertice2);
     }
+
+    public Aresta(){}
 
     public String getNome() {
         return this.nome;
