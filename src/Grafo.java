@@ -109,6 +109,10 @@ public class Grafo {
         return cont;
     }
 
+    public void adicionaVertice(String vertice){
+        vertices.add(vertice);
+    }
+
     public int getOrdem(){
         return vertices.size();
     }

@@ -47,7 +47,7 @@ public class Main {
                         System.out.printf("\n Não será possivel criar este vertice, pois já existe um vertice com este nome.");
                     } else {
 
-                        grafo.getVertices().add(nomeVertice);
+                        grafo.adicionaVertice(nomeVertice);
                         System.out.println(grafo.getVertices().get(0)+'\n');
                         //System.out.println(grafo.getVertices().get(1));
                     }
