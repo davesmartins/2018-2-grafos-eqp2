@@ -113,5 +113,35 @@ public class Grafo {
         return vertices.size();
     }
 
+    public ArrayList<String> getArestas() {
+        return arestas;
+    }
 
+    public void setArestas(ArrayList<String> arestas) {
+        this.arestas = arestas;
+    }
+
+    public ArrayList<String> getVertices() {
+        return vertices;
+    }
+
+    public void setVertices(ArrayList<String> vertices) {
+        this.vertices = vertices;
+    }
+
+    public ArrayList<String> getNomeArestas() {
+        return nomeArestas;
+    }
+
+    public void setNomeArestas(ArrayList<String> nomeArestas) {
+        this.nomeArestas = nomeArestas;
+    }
+
+    public int[][] getMatriz() {
+        return matriz;
+    }
+
+    public void setMatriz(int[][] matriz) {
+        this.matriz = matriz;
+    }
 }
