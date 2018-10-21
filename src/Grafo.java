@@ -42,7 +42,7 @@ public class Grafo {
 
                 for(int j = 0; j< matriz.length;j++){
 
-                    System.out.printf("%d", matriz);
+                    System.out.printf("%d", matriz[k][j]);
 
                 }
 
