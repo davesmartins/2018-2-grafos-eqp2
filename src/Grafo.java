@@ -5,6 +5,7 @@ public class Grafo {
     private ArrayList<String> vertices = new ArrayList<String>();
     private ArrayList<String> nomeArestas = new ArrayList<String>();
     private boolean orientada;
+    int [][] matriz = new int[this.getOrdem()][];
 
     public  Grafo (ArrayList<String> arestas, ArrayList<String> vertices, ArrayList<String> nomeArestas, boolean orientada){
         this.arestas = arestas;
@@ -24,7 +25,7 @@ public class Grafo {
         this.orientada = orientada;
     }
 
-    public void printMatriz(Integer matriz[][]){
+    public void printMatriz(){
 
             /*int[][] mat = armazenarGrafo();
             ArrayList<String> lista = new ArrayList<>();
@@ -36,10 +37,21 @@ public class Grafo {
                 lista.add(linha);
             }
             return lista;*/
+
+            for(int k = 0; k<matriz.length; k++){
+
+                for(int j = 0; j< matriz.length;j++){
+
+                    System.out.printf("%d", matriz);
+
+                }
+
+            }
+
     }
 
     private int[][] armazenarGrafo() {
-        int [][] matriz = new int[this.getOrdem()][];
+
         if (this.isOrientada()){
             for (int i = 0; i < arestas.size(); i++){
                 for (int j = 0; j < this.vertices.size(); j++){

@@ -98,11 +98,16 @@ public class Main {
                 grafo = new Grafo(arestas, vertices,nomeArestas, orientado);
                 break;
             case 4:
-                ArrayList<String> matriz = new ArrayList<String>();
+                System.out.println("\n Grafo:\n");
+                grafo.printMatriz();
+
+
+
+                /*ArrayList<String> matriz = new ArrayList<String>();
                 matriz = grafo.printMatriz();
                 for (int i = 0; i < matriz.size(); i++) {
                     System.out.println(matriz.get(i) + "\n");
-                }
+                }*/
                 break;
             case 0:
                 resultado = -1;
