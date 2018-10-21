@@ -13,6 +13,9 @@ public class Grafo {
         this.setOrientada(orientada);
     }
 
+    public Grafo (){
+    }
+
     public boolean isOrientada() {
         return orientada;
     }
@@ -21,9 +24,9 @@ public class Grafo {
         this.orientada = orientada;
     }
 
-    public ArrayList<String> printMatriz(){
+    public void printMatriz(Integer matriz[][]){
 
-            int[][] mat = armazenarGrafo();
+            /*int[][] mat = armazenarGrafo();
             ArrayList<String> lista = new ArrayList<>();
             for (int i = 0; i < getOrdem(); i++){
                 String linha = "";
@@ -32,18 +35,18 @@ public class Grafo {
                 }
                 lista.add(linha);
             }
-            return lista;
+            return lista;*/
     }
 
     private int[][] armazenarGrafo() {
         int [][] matriz = new int[this.getOrdem()][];
         if (this.isOrientada()){
-            for (int i = 0; i < this.getOrdem(); i++){
-                for (int j = 0; j < this.arestas.size(); j++){
-                    if (this.arestas.get(j) == this.vertices.get(i)){
+            for (int i = 0; i < arestas.size(); i++){
+                for (int j = 0; j < this.vertices.size(); j++){
+                    if (this.vertices.get(j) == getVerticeOrigem(arestas,i)){
                         matriz[i][j] = 1;
                     }else{
-                        if (this.arestas.get(j) == this.vertices.get(i)){
+                        if (this.vertices.get(j) == getVerticeDestino(arestas,i)){
                             matriz[i][j] = -1;
                         }else {
                             matriz[i][j] = 0;
@@ -54,8 +57,8 @@ public class Grafo {
         }else{
             for (int i = 0; i < this.getOrdem(); i++){
                 for (int j = 0; j < this.arestas.size(); j++){
-                    if (this.arestas.get(j) == this.vertices.get(i) ||
-                        this.arestas.get(j) == this.vertices.get(i)){
+                    if (this.vertices.get(j) == getVerticeOrigem(arestas,i) ||
+                        this.vertices.get(j) == getVerticeDestino(arestas,i)){
                         matriz[i][j] = 1;
                     }else{
                         matriz[i][j] = 0;
