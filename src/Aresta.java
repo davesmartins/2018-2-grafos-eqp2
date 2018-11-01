@@ -1,42 +1,35 @@
 public class Aresta {
-    private String nome;
-    public String verticeOrigem;
-    public String verticeDestino;
+    private String id;
+    private Vertice verticeOrigem;
+    private Vertice verticeDestino;
 
-
-    public Aresta(String vertice1, String vertice2) {
-        this.setNome(nome);
-        this.setVerticeOrigem(vertice1);
-        this.setVerticeDestino(vertice2);
+    public Aresta(String nome, Vertice vertice1, Vertice vertice2) {
+        this.id = nome;
+        this.verticeOrigem = vertice1;
+        this.verticeDestino = vertice2;
     }
 
-    public Aresta(){}
-
-    public String getNome() {
-        return this.nome;
+    public String getId() {
+        return id;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setId(String id) {
+        this.id = id;
     }
 
-    public String getVerticeOrigem() {
+    public Vertice getVerticeOrigem() {
         return verticeOrigem;
     }
 
-    public void setVerticeOrigem(String verticeOrigem) {
+    public void setVerticeOrigem(Vertice verticeOrigem) {
         this.verticeOrigem = verticeOrigem;
     }
 
-    public String getVerticeDestino() {
+    public Vertice getVerticeDestino() {
         return verticeDestino;
     }
 
-    public void setVerticeDestino(String verticeDestino) {
+    public void setVerticeDestino(Vertice verticeDestino) {
         this.verticeDestino = verticeDestino;
     }
 }
-
-
-
-

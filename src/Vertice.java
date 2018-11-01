@@ -1,18 +1,15 @@
 public class Vertice {
-    private String nome;
+    private String id;
 
-    public  Vertice(String nome){
-        this.setNome(nome);
+    public Vertice(String id) {
+        this.id = id;
     }
 
-    public String getNome() {
-        return this.nome;
+    public String getId() {
+        return id;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setId(String id) {
+        this.id = id;
     }
-
-
-    public Vertice(){}
 }
