@@ -65,6 +65,11 @@ public class Graph {
         if(this.vertexes.contains(vertex)){
            Integer vertexIndex = this.vertexes.indexOf(vertex);
            this.vertexes.remove(vertexIndex);
+           for (int i = 0; i < this.incidenceMatrix.get(vertexIndex).size(); i++){
+               if (this.incidenceMatrix.get(vertexIndex).get(i) > 0){
+                   this.deleteEdge(i);
+               }
+           }
         }else {
             System.out.println("ERROR: Não existe um Vértice com esse nome!!");
             System.out.println("ERROR: Aborting!!!");
@@ -83,6 +88,13 @@ public class Graph {
             System.out.println("ERROR: Não existe uma Aresta com esse nome!!");
             System.out.println("ERROR: Aborting!!!");
             return;
+        }
+    }
+
+    public void deleteEdge(Integer index){
+        this.edges.remove(index);
+        for(int i = 0; i < this.incidenceMatrix.size(); i++){
+            this.incidenceMatrix.get(i).remove(index);
         }
     }
 
