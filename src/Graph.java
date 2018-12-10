@@ -13,12 +13,10 @@ public class Graph {
     }
 
     public void addVertex(String insert) {
-        for (String v : this.vertexes) {
-            if (v.equals(insert)) {
-                System.out.println("ERROR: Vertices precisam ter nomes diferentes!!!!!");
-                System.out.println("ERROR: Aborting!!!");
-                return;
-            }
+        if (this.vertexes.contains(insert)) {
+            System.out.println("ERROR: Vertices precisam ter nomes diferentes!!!!!");
+            System.out.println("ERROR: Aborting!!!");
+            return;
         }
         this.vertexes.add(insert);
         ArrayList<Integer> a = new ArrayList<Integer>();
@@ -31,14 +29,7 @@ public class Graph {
     }
 
     public void addEdge(String start, String end, Integer cost, String edge) {
-        for (String e : this.edges) {
-            if (e.equals(edge)) {
-                System.out.println("ERROR: Arestas precisam ter nomes diferentes!!!!!");
-                System.out.println("ERROR: Aborting!!!");
-                return;
-            }
-        }
-        if (this.vertexes.contains(start) && this.vertexes.contains(end) && cost > 0) {
+        if (this.vertexes.contains(start) && this.vertexes.contains(end) && cost > 0 && !this.edges.contains(edge)) {
             Integer startIndex = this.vertexes.indexOf(start);
             Integer endIndex = this.vertexes.indexOf(end);
             for (ArrayList<Integer> a : this.incidenceMatrix) {
@@ -55,6 +46,7 @@ public class Graph {
             }
             this.edges.add(edge);
         }else{
+            System.out.println("ERROR: Lembre-se, Arestas precisam ter nomes diferentes!!!!!");
             System.out.println("ERROR: O custo DEVE ser MAIOR que 0(zero)!!!!");
             System.out.println("ERROR: O nome dos vertices podem estar errados, certifique-se de colocar cada caracter igual ao nome do vertice!!");
             System.out.println("ERROR: Aborting!!!");

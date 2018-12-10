@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50e907fe-9e6e-49a8-a887-fb2412fad3bf" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graph.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -74,12 +75,12 @@
     <session id="1980660294">
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="7853" />
+          <entry key="java" value="7889" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7853" />
+          <entry key="JAVA" value="7889" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -234,8 +235,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Graph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="63" column="43" selection-start-line="63" selection-start-column="43" selection-end-line="63" selection-end-column="43" />
+            <state relative-caret-position="153">
+              <caret line="9" selection-start-line="9" selection-end-line="9" />
               <folding>
                 <element signature="method#Graph#0;class#Graph#0" />
                 <element signature="method#addVertex#0;class#Graph#0" />
@@ -243,10 +244,6 @@
                 <element signature="method#deleteVertex#0;class#Graph#0" />
                 <element signature="method#deleteEdge#0;class#Graph#0" />
                 <element signature="method#deleteEdge#1;class#Graph#0" />
-                <element signature="e#4135#4136#0" expanded="true" />
-                <element signature="e#4169#4170#0" expanded="true" />
-                <element signature="e#4203#4204#0" expanded="true" />
-                <element signature="e#4239#4240#0" expanded="true" />
                 <element signature="method#toString#0;class#Graph#0" />
               </folding>
             </state>
@@ -404,7 +401,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="79346000" />
+    <option name="totallyTimeSpent" value="80182000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -509,8 +506,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Graph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="63" column="43" selection-start-line="63" selection-start-column="43" selection-end-line="63" selection-end-column="43" />
+        <state relative-caret-position="153">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
           <folding>
             <element signature="method#Graph#0;class#Graph#0" />
             <element signature="method#addVertex#0;class#Graph#0" />
@@ -518,10 +515,6 @@
             <element signature="method#deleteVertex#0;class#Graph#0" />
             <element signature="method#deleteEdge#0;class#Graph#0" />
             <element signature="method#deleteEdge#1;class#Graph#0" />
-            <element signature="e#4135#4136#0" expanded="true" />
-            <element signature="e#4169#4170#0" expanded="true" />
-            <element signature="e#4203#4204#0" expanded="true" />
-            <element signature="e#4239#4240#0" expanded="true" />
             <element signature="method#toString#0;class#Graph#0" />
           </folding>
         </state>
