@@ -1,15 +1,28 @@
 import java.util.Scanner;
 
 public class Menu {
-    private Graph graph = new Graph();
+    private Graph graph;
 
-    public void mainMenu(){
+    public void createGraphMenu(){
+        Boolean oriented;
+        Boolean valued;
+        Scanner scan = new Scanner(System.in);
+        System.out.println("****************************** Criando Grafo ******************************");
+        System.out.println("O Grafo será orientado?");
+        oriented = scan.nextBoolean();
+        System.out.println("O Grafo será valorado?");
+        valued = scan.nextBoolean();
+        System.out.println("*****************************************************************************************");
+        graph = new Graph(oriented, valued);
+    }
+
+    public void graphMenu(){
         String vertex = "";
         String edge = "";
         String start = "";
         String end = "";
         Integer cost;
-        Integer option = 0;
+        Integer option;
         Scanner scan = new Scanner(System.in);
 
         do {
@@ -34,14 +47,14 @@ public class Menu {
                     break;
                 case 2:
                     System.out.println("****************************** Criando Aresta ******************************");
+                    System.out.println("Digite o nome da Aresta:");
+                    edge = scan.next();
                     System.out.println("Digite o nome do Vertice de Origem:");
                     start = scan.next();
                     System.out.println("Digite o nome do Vertice de Destino:");
                     end = scan.next();
                     System.out.println("Digite o custo da Aresta:");
                     cost = scan.nextInt();
-                    System.out.println("Digite o nome da Aresta:");
-                    edge = scan.next();
                     graph.addEdge(start, end, cost, edge);
                     break;
                 case 3:
@@ -62,7 +75,7 @@ public class Menu {
                     System.out.println(graph.toString());
                     break;
 
-                    default:
+                default:
                     System.out.println("O comando digitado NÃO existe!!!");
                     break;
             }

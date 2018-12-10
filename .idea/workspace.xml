@@ -2,9 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50e907fe-9e6e-49a8-a887-fb2412fad3bf" name="Default Changelist" comment="">
-<<<<<<< HEAD
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-=======
       <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Grafos2018/Graph.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Grafos2018/Graph.class" afterDir="false" />
@@ -12,7 +9,6 @@
       <change beforePath="$PROJECT_DIR$/out/production/Grafos2018/Menu.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Grafos2018/Menu.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graph.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
->>>>>>> 0de7250149e7d0df0933cb251089f27498529a65
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -84,12 +80,12 @@
     <session id="1980660294">
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="7265" />
+          <entry key="java" value="7599" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="7265" />
+          <entry key="JAVA" value="7599" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -235,8 +231,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+            <state relative-caret-position="34">
+              <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -244,15 +240,15 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Graph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="550">
-              <caret line="67" column="51" selection-start-line="67" selection-start-column="51" selection-end-line="67" selection-end-column="51" />
+            <state relative-caret-position="323">
+              <caret line="85" column="27" selection-start-line="85" selection-start-column="27" selection-end-line="85" selection-end-column="27" />
               <folding>
-<<<<<<< HEAD
+                <element signature="method#Graph#0;class#Graph#0" />
                 <element signature="method#addVertex#0;class#Graph#0" />
                 <element signature="method#addEdge#0;class#Graph#0" />
-=======
-                <element signature="e#240#248#0" expanded="true" />
->>>>>>> 0de7250149e7d0df0933cb251089f27498529a65
+                <element signature="method#deleteVertex#0;class#Graph#0" />
+                <element signature="method#deleteEdge#0;class#Graph#0" />
+                <element signature="method#toString#0;class#Graph#0" />
               </folding>
             </state>
           </provider>
@@ -261,8 +257,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Menu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="523">
-              <caret line="54" column="79" selection-start-line="54" selection-start-column="79" selection-end-line="54" selection-end-column="79" />
+            <state relative-caret-position="255">
+              <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
             </state>
           </provider>
         </entry>
@@ -321,11 +317,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-<<<<<<< HEAD
       <pane id="Scope" />
       <pane id="PackagesPane" />
-=======
->>>>>>> 0de7250149e7d0df0933cb251089f27498529a65
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -333,28 +326,18 @@
               <item name="2018-2-grafos-eqp2" type="b2602c69:ProjectViewProjectNode" />
               <item name="2018-2-grafos-eqp2" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="2018-2-grafos-eqp2" type="b2602c69:ProjectViewProjectNode" />
-              <item name="2018-2-grafos-eqp2" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-<<<<<<< HEAD
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541281711738" />
-=======
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544450031108" />
->>>>>>> 0de7250149e7d0df0933cb251089f27498529a65
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -411,32 +394,21 @@
       <workItem from="1541076746796" duration="7175000" />
       <workItem from="1541087023478" duration="3795000" />
       <workItem from="1541276795894" duration="682000" />
-<<<<<<< HEAD
       <workItem from="1541277545795" duration="4419000" />
       <workItem from="1544463950605" duration="412000" />
-=======
       <workItem from="1541277545795" duration="3942000" />
       <workItem from="1544450050380" duration="1603000" />
->>>>>>> 0de7250149e7d0df0933cb251089f27498529a65
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-<<<<<<< HEAD
-    <option name="totallyTimeSpent" value="71288000" />
-=======
-    <option name="totallyTimeSpent" value="74710000" />
->>>>>>> 0de7250149e7d0df0933cb251089f27498529a65
+    <option name="totallyTimeSpent" value="77085000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-<<<<<<< HEAD
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15658094" />
-=======
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.08901919" />
->>>>>>> 0de7250149e7d0df0933cb251089f27498529a65
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -497,7 +469,6 @@
     <entry file="file://$PROJECT_DIR$/Grafos2018.iml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-<<<<<<< HEAD
     <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
@@ -512,17 +483,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="234" column="18" selection-start-line="234" selection-start-column="18" selection-end-line="234" selection-end-column="18" />
-=======
-    <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/util/ArrayList.java" />
-    <entry file="file://$PROJECT_DIR$/src/Grafo.java" />
-    <entry file="file://$PROJECT_DIR$/src/Vertice.java" />
-    <entry file="file://$PROJECT_DIR$/src/Aresta.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/Object.java" />
-    <entry file="jar://E:/JDKK/Java/jdk-10.0.2/lib/src.zip!/java.base/java/lang/Integer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="58" column="19" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
->>>>>>> 0de7250149e7d0df0933cb251089f27498529a65
         </state>
       </provider>
     </entry>
@@ -530,27 +490,29 @@
     <entry file="file://$PROJECT_DIR$/src/Vertex.java" />
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="4" column="2" selection-start-line="4" selection-start-column="2" selection-end-line="4" selection-end-column="2" />
+        <state relative-caret-position="34">
+          <caret line="2" column="30" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
         </state>
       </provider>
     </entry>
-<<<<<<< HEAD
-=======
     <entry file="file://$PROJECT_DIR$/src/Menu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="523">
-          <caret line="54" column="79" selection-start-line="54" selection-start-column="79" selection-end-line="54" selection-end-column="79" />
+        <state relative-caret-position="255">
+          <caret line="15" column="44" selection-start-line="15" selection-start-column="44" selection-end-line="15" selection-end-column="44" />
         </state>
       </provider>
     </entry>
->>>>>>> 0de7250149e7d0df0933cb251089f27498529a65
     <entry file="file://$PROJECT_DIR$/src/Graph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="550">
-          <caret line="67" column="51" selection-start-line="67" selection-start-column="51" selection-end-line="67" selection-end-column="51" />
+        <state relative-caret-position="323">
+          <caret line="85" column="27" selection-start-line="85" selection-start-column="27" selection-end-line="85" selection-end-column="27" />
           <folding>
-            <element signature="e#240#248#0" expanded="true" />
+            <element signature="method#Graph#0;class#Graph#0" />
+            <element signature="method#addVertex#0;class#Graph#0" />
+            <element signature="method#addEdge#0;class#Graph#0" />
+            <element signature="method#deleteVertex#0;class#Graph#0" />
+            <element signature="method#deleteEdge#0;class#Graph#0" />
+            <element signature="method#toString#0;class#Graph#0" />
           </folding>
         </state>
       </provider>

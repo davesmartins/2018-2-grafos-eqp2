@@ -4,6 +4,13 @@ public class Graph {
     ArrayList<ArrayList<Integer>> incidenceMatrix = new ArrayList<ArrayList<Integer>>();
     ArrayList<String> vertexes = new ArrayList<String>();
     ArrayList<String> edges = new ArrayList<String>();
+    Boolean oriented;
+    Boolean valued;
+
+    public Graph (Boolean oriented, Boolean valued){
+        this.oriented = oriented;
+        this.valued = valued;
+    }
 
     public void addVertex(String insert) {
         for (String v : this.vertexes) {
@@ -73,6 +80,10 @@ public class Graph {
             System.out.println("ERROR: Aborting!!!");
             return;
         }
+    }
+
+    public Boolean isValued(){
+        return this.valued;
     }
 
     @Override
