@@ -5,6 +5,7 @@ public class Menu {
 
     public void mainMenu(){
         String vertex = "";
+        String edge = "";
         String start = "";
         String end = "";
         Integer cost;
@@ -16,7 +17,9 @@ public class Menu {
             System.out.println("Digite 0 para Sair do Programa.\n" +
                     "Digite 1 para Adicionar um Vertice no Grafo.\n" +
                     "Digite 2 para Adicionar uma Aresta no Grafo.\n" +
-                    "Digite 3 para Imprimir o Grafo em uma Matriz de Incidência.");
+                    "Digite 3 para Remover uma Aresta no Grafo.\n" +
+                    "Digite 4 para Remover uma Vertice no Grafo.\n" +
+                    "Digite 5 para Imprimir o Grafo em uma Matriz de Incidência.");
             System.out.println("*****************************************************************************************");
             System.out.println("O que você deseja fazer agora?");
             option = scan.nextInt();
@@ -37,13 +40,29 @@ public class Menu {
                     end = scan.next();
                     System.out.println("Digite o custo da Aresta:");
                     cost = scan.nextInt();
-                    graph.addEdge(start, end, cost);
+                    System.out.println("Digite o nome da Aresta:");
+                    edge = scan.next();
+                    graph.addEdge(start, end, cost, edge);
                     break;
                 case 3:
+                    System.out.println("****************************** Remove Aresta ******************************");
+                    System.out.println("Digite o nome da Aresta à ser removida:");
+                    edge = scan.next();
+                    graph.deleteEdge(edge);
+                    break;
+                case 4:
+                    System.out.println("****************************** Remove Vertice ******************************");
+                    System.out.println("Digite o nome do Vertice à ser removido:");
+                    vertex = scan.next();
+                    graph.deleteVertex(vertex);
+                    break;
+
+                case 5:
                     System.out.println("****************************** Imprimindo Grafo ******************************");
                     System.out.println(graph.toString());
                     break;
-                default:
+
+                    default:
                     System.out.println("O comando digitado NÃO existe!!!");
                     break;
             }
