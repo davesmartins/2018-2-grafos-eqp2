@@ -53,8 +53,12 @@ public class Menu {
                     start = scan.next();
                     System.out.println("Digite o nome do Vertice de Destino:");
                     end = scan.next();
-                    System.out.println("Digite o custo da Aresta:");
-                    cost = scan.nextInt();
+                    if (graph.isValued()) {
+                        System.out.println("Digite o custo da Aresta(Não aceitamos valores negativos):");
+                        cost = scan.nextInt();
+                    }else{
+                        cost = 1;
+                    }
                     graph.addEdge(start, end, cost, edge);
                     break;
                 case 3:

@@ -38,7 +38,7 @@ public class Graph {
                 return;
             }
         }
-        if (this.vertexes.contains(start) && this.vertexes.contains(end) && cost != 0) {
+        if (this.vertexes.contains(start) && this.vertexes.contains(end) && cost > 0) {
             Integer startIndex = this.vertexes.indexOf(start);
             Integer endIndex = this.vertexes.indexOf(end);
             for (ArrayList<Integer> a : this.incidenceMatrix) {
@@ -51,8 +51,8 @@ public class Graph {
             this.incidenceMatrix.get(endIndex).add(-cost);
             this.edges.add(edge);
         }else{
-            System.out.println("ERROR: O custo NÃO pode ser 0(zero)!!!!");
-            System.out.println("ERROR: O nome dos vertices podem estar errados, certifique-se de colocar cada caracter igual ao do vertice!!");
+            System.out.println("ERROR: O custo DEVE ser MAIOR que 0(zero)!!!!");
+            System.out.println("ERROR: O nome dos vertices podem estar errados, certifique-se de colocar cada caracter igual ao nome do vertice!!");
             System.out.println("ERROR: Aborting!!!");
         }
     }
