@@ -32,7 +32,8 @@ public class Menu {
                     "Digite 2 para Adicionar uma Aresta no Grafo.\n" +
                     "Digite 3 para Remover uma Aresta no Grafo.\n" +
                     "Digite 4 para Remover uma Vertice no Grafo.\n" +
-                    "Digite 5 para Imprimir o Grafo em uma Matriz de Incidência.");
+                    "Digite 5 para Imprimir o Grafo em uma Matriz de Incidência.\n" +
+                    "Digite 6 para Exibir o Menu de Informações do Grafo.");
             System.out.println("*****************************************************************************************");
             System.out.println("O que você deseja fazer agora?");
             option = scan.nextInt();
@@ -84,5 +85,14 @@ public class Menu {
                     break;
             }
         }while (option != 0);
+    }
+
+    public void informationMenu(){
+        System.out.println("****************************** Informações do Grafo ******************************");
+        System.out.println("Ordem do Grafo: " + graph.order());
+        for (int i = 0; i < graph.getVertexes().size(); i++){
+            System.out.println("Grau do Vertice" + graph.getVertexes().get(i) + ": " + graph.order());
+        }
+        System.out.println("*****************************************************************************************");
     }
 }

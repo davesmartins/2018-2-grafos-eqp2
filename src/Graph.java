@@ -98,6 +98,14 @@ public class Graph {
         return this.oriented;
     }
 
+    public Integer order(){
+        return this.vertexes.size();
+    }
+
+    public ArrayList<String> getVertexes(){
+        return this.vertexes;
+    }
+
     @Override
     public String toString() {
         String s = "";
