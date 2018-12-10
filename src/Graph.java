@@ -48,7 +48,11 @@ public class Graph {
             this.incidenceMatrix.get(startIndex).remove(this.incidenceMatrix.get(startIndex).size() - 1);
             this.incidenceMatrix.get(endIndex).remove(this.incidenceMatrix.get(endIndex).size() - 1);
             this.incidenceMatrix.get(startIndex).add(cost);
-            this.incidenceMatrix.get(endIndex).add(-cost);
+            if (this.isOriented()){
+                this.incidenceMatrix.get(endIndex).add(-cost);
+            }else{
+                this.incidenceMatrix.get(endIndex).add(cost);
+            }
             this.edges.add(edge);
         }else{
             System.out.println("ERROR: O custo DEVE ser MAIOR que 0(zero)!!!!");
@@ -84,6 +88,10 @@ public class Graph {
 
     public Boolean isValued(){
         return this.valued;
+    }
+
+    public Boolean isOriented(){
+        return this.oriented;
     }
 
     @Override
