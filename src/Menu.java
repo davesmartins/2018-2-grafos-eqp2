@@ -90,7 +90,7 @@ public class Menu {
                     System.out.println("****************************** Remove Aresta ******************************");
                     System.out.println("Digite o nome da Aresta à ser removida:");
                     edge = scan.next();
-                    graph.deleteEdge(edge);
+                    graph.deleteEdge(graph.getEdeg(edge));
                     break;
                 case 4:
                     System.out.println("****************************** Remove Vertice ******************************");

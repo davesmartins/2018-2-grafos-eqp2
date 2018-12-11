@@ -5,8 +5,7 @@ public class Graph {
     String name;
     ArrayList<ArrayList<Integer>> incidenceMatrix = new ArrayList<ArrayList<Integer>>();
     ArrayList<String> vertexes = new ArrayList<String>();
-    ArrayList<String> edges = new ArrayList<String>();
-    ArrayList<Integer> edgesCost = new ArrayList<Integer>();
+    ArrayList<Edge> edges = new ArrayList<Edge>();
     Boolean oriented;
     Boolean valued;
 
@@ -36,8 +35,16 @@ public class Graph {
         this.incidenceMatrix.add(a);
     }
 
-    public void addEdge(String start, String end, Integer cost, String edge) {
-        if (this.vertexes.contains(start) && this.vertexes.contains(end) && cost > 0 && !this.edges.contains(edge)) {
+    public void addEdge(String start, String end, Integer cost, String name) {
+        for (Edge e : this.getEdges()) {
+            if (e.getName().equals(name)){
+                System.out.println("ERROR: Lembre-se, Arestas precisam ter nomes diferentes!!!!!");
+                System.out.println("ERROR: Aborting!!!");
+                return;
+            }
+        }
+
+        if (this.vertexes.contains(start) && this.vertexes.contains(end) && cost > 0) {
             int startIndex = this.vertexes.indexOf(start);
             int endIndex = this.vertexes.indexOf(end);
             for (ArrayList<Integer> a : this.incidenceMatrix) {
@@ -52,10 +59,10 @@ public class Graph {
             }else{
                 this.incidenceMatrix.get(endIndex).add(cost);
             }
-            this.edges.add(edge);
-            this.edgesCost.add(cost);
+
+            Edge edge = new Edge(name, start, end, cost);
+            this.getEdges().add(edge);
         }else{
-            System.out.println("ERROR: Lembre-se, Arestas precisam ter nomes diferentes!!!!!");
             System.out.println("ERROR: O custo DEVE ser MAIOR que 0(zero)!!!!");
             System.out.println("ERROR: O nome dos vertices podem estar errados, certifique-se de colocar cada caracter igual ao nome do vertice!!");
             System.out.println("ERROR: Aborting!!!");
@@ -80,8 +87,8 @@ public class Graph {
         }
     }
 
-    public void deleteEdge(String edge){
-        if(this.edges.contains(edge)){
+    public void deleteEdge(Edge edge){
+        if(edge != null){
             int edgeIndex = this.edges.indexOf(edge);
             this.edges.remove(edgeIndex);
             for(int i = 0; i < this.incidenceMatrix.size(); i++){
@@ -175,12 +182,20 @@ public class Graph {
         }
     }
 
-    public ArrayList<String> getEdges(){
+    public ArrayList<Edge> getEdges(){
         return this.edges;
     }
 
-    public ArrayList<Integer> getEdgesCost(){
-        return this.edgesCost;
+    public Edge getEdeg(String name){
+        Edge edge = null;
+
+        for (Edge e : this.getEdges()){
+            if (e.getName().equals(name)){
+                edge = e;
+            }
+        }
+
+        return edge;
     }
 
     @Override
