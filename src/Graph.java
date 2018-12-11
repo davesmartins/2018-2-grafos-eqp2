@@ -60,7 +60,8 @@ public class Graph {
            this.vertexes.remove(vertexIndex);
            for (int i = 0; i < this.incidenceMatrix.get(vertexIndex).size(); i++){
                if (this.incidenceMatrix.get(vertexIndex).get(i) > 0){
-                   this.deleteEdge(i);
+                   this.deleteEdge(this.edges.get(i));
+                   i=-1;
                }
            }
            this.incidenceMatrix.remove(vertexIndex);
@@ -82,13 +83,6 @@ public class Graph {
             System.out.println("ERROR: Não existe uma Aresta com esse nome!!");
             System.out.println("ERROR: Aborting!!!");
             return;
-        }
-    }
-
-    public void deleteEdge(int index){
-        this.edges.remove(index);
-        for(int i = 0; i < this.incidenceMatrix.size(); i++){
-            this.incidenceMatrix.get(i).remove(index);
         }
     }
 
@@ -165,7 +159,7 @@ public class Graph {
         return degree;
     }
 
-    public int isComplete() {
+    public Integer isComplete() {
         if (isRegular() == order() - 1) {
             System.out.println("É completo");
             return order();
