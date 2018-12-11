@@ -1,3 +1,4 @@
+import java.net.Inet4Address;
 import java.util.ArrayList;
 
 public class Graph {
@@ -100,6 +101,54 @@ public class Graph {
 
     public Integer order(){
         return this.vertexes.size();
+    }
+
+    public Integer vertexDegree(String vertex){
+        Integer degree = 0;
+        if (this.getVertexes().contains(vertex)){
+            Integer vertexIndex = this.getVertexes().indexOf(vertex);
+            ArrayList<Integer> arrayList = this.incidenceMatrix.get(vertexIndex);
+            for (Integer x: arrayList) {
+                if (x != 0){
+                    degree++;
+                }
+            }
+            return degree;
+        }else{
+            return -1;
+        }
+    }
+
+    public Integer vertexInputDegree(String vertex){
+        Integer degree = 0;
+        if (this.getVertexes().contains(vertex)){
+            Integer vertexIndex = this.getVertexes().indexOf(vertex);
+            ArrayList<Integer> arrayList = this.incidenceMatrix.get(vertexIndex);
+            for (Integer x: arrayList) {
+                if (x > 0){
+                    degree++;
+                }
+            }
+            return degree;
+        }else{
+            return -1;
+        }
+    }
+
+    public Integer vertexOutputDegree(String vertex){
+        Integer degree = 0;
+        if (this.getVertexes().contains(vertex)){
+            Integer vertexIndex = this.getVertexes().indexOf(vertex);
+            ArrayList<Integer> arrayList = this.incidenceMatrix.get(vertexIndex);
+            for (Integer x: arrayList) {
+                if (x < 0){
+                    degree++;
+                }
+            }
+            return degree;
+        }else{
+            return -1;
+        }
     }
 
     public ArrayList<String> getVertexes(){
