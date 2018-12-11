@@ -123,6 +123,8 @@ public class Menu {
                 System.out.println("Grau de Saída do Vertice '" + graph.getVertexes().get(i) + "': " + graph.vertexOutputDegree(graph.getVertexes().get(i)));
             }
         }
+        System.out.println("\n");
+        graph.isComplete();
         System.out.println("*****************************************************************************************");
     }
 }

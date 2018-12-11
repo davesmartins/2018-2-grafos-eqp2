@@ -149,26 +149,23 @@ public class Graph {
                 degree = vertexDegree(vertex);
 
             } else if (degree != vertexDegree(vertex)) {
-                System.out.println("Não é regular");
+                System.out.println("Esse Grafo Não é regular");
                 return 0;
             }
 
         }
-        System.out.println("É regular");
+        System.out.println("Esse Grafo É regular");
 
         return degree;
     }
 
-    public Integer isComplete() {
+    public void isComplete() {
         if (isRegular() == order() - 1) {
-            System.out.println("É completo");
-            return order();
+            System.out.println("Esse Grafo É completo");
         } else {
-            System.out.println("Não é completo");
-            return 0;
+            System.out.println("Esse Grafo Não é completo");
         }
     }
-
 
     @Override
     public String toString() {
