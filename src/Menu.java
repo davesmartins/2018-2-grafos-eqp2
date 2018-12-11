@@ -9,7 +9,7 @@ public class Menu {
         Boolean valued;
         Scanner scan = new Scanner(System.in);
         System.out.println("****************************** Criando Grafo ******************************");
-        System.out.println("O Grafo será orientado?");
+        System.out.println("O Grafo será orientado?(Digite 'y' para Sim e 'n' para Não)");
         option = scan.next();
         if (option.equals("y") || option.equals("Y")){
             oriented = true;
@@ -17,10 +17,11 @@ public class Menu {
             oriented = false;
         }else{
             System.out.println("ERROR: Digite apenas y ou n");
+            System.out.println("ERROR: Aborting!!!");
             return;
         }
 
-        System.out.println("O Grafo será valorado?");
+        System.out.println("O Grafo será valorado?(Digite 'y' para Sim e 'n' para Não)");
         option = scan.next();
         if (option.equals("y") || option.equals("Y")){
             valued = true;
@@ -28,6 +29,7 @@ public class Menu {
             valued = false;
         }else{
             System.out.println("ERROR: Digite apenas y ou n");
+            System.out.println("ERROR: Aborting!!!");
             return;
         }
         System.out.println("*****************************************************************************************");

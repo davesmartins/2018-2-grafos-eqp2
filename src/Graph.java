@@ -73,7 +73,9 @@ public class Graph {
     public void deleteEdge(String edge){
         if(this.edges.contains(edge)){
             Integer edgeIndex = this.edges.indexOf(edge);
+            System.out.println(this.edges.size());
             this.edges.remove(edgeIndex);
+            System.out.println(this.edges.size());
             for(int i = 0; i < this.incidenceMatrix.size(); i++){
                 this.incidenceMatrix.get(i).remove(edgeIndex);
             }
