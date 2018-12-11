@@ -6,6 +6,7 @@ public class Graph {
     ArrayList<ArrayList<Integer>> incidenceMatrix = new ArrayList<ArrayList<Integer>>();
     ArrayList<String> vertexes = new ArrayList<String>();
     ArrayList<String> edges = new ArrayList<String>();
+    ArrayList<Integer> edgesCost = new ArrayList<Integer>();
     Boolean oriented;
     Boolean valued;
 
@@ -52,6 +53,7 @@ public class Graph {
                 this.incidenceMatrix.get(endIndex).add(cost);
             }
             this.edges.add(edge);
+            this.edgesCost.add(cost);
         }else{
             System.out.println("ERROR: Lembre-se, Arestas precisam ter nomes diferentes!!!!!");
             System.out.println("ERROR: O custo DEVE ser MAIOR que 0(zero)!!!!");
@@ -171,6 +173,14 @@ public class Graph {
         } else {
             System.out.println("Esse Grafo Não é completo");
         }
+    }
+
+    public ArrayList<String> getEdges(){
+        return this.edges;
+    }
+
+    public ArrayList<Integer> getEdgesCost(){
+        return this.edgesCost;
     }
 
     @Override
