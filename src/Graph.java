@@ -2,15 +2,21 @@ import java.net.Inet4Address;
 import java.util.ArrayList;
 
 public class Graph {
+    String name;
     ArrayList<ArrayList<Integer>> incidenceMatrix = new ArrayList<ArrayList<Integer>>();
     ArrayList<String> vertexes = new ArrayList<String>();
     ArrayList<String> edges = new ArrayList<String>();
     Boolean oriented;
     Boolean valued;
 
-    public Graph (Boolean oriented, Boolean valued){
+    public Graph (String name, Boolean oriented, Boolean valued){
+        this.name = name;
         this.oriented = oriented;
         this.valued = valued;
+    }
+
+    public String getName(){
+        return this.name;
     }
 
     public void addVertex(String insert) {

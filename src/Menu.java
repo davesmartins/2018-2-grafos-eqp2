@@ -5,10 +5,13 @@ public class Menu {
 
     public void createGraphMenu(){
         String option;
+        String name;
         Boolean oriented;
         Boolean valued;
         Scanner scan = new Scanner(System.in);
         System.out.println("****************************** Criando Grafo ******************************");
+        System.out.println("Qual o nome do Grafo a ser criado?");
+        name = scan.next();
         System.out.println("O Grafo será orientado?(Digite 'y' para Sim e 'n' para Não)");
         option = scan.next();
         if (option.equals("y") || option.equals("Y")){
@@ -33,7 +36,7 @@ public class Menu {
             return;
         }
         System.out.println("*****************************************************************************************");
-        graph = new Graph(oriented, valued);
+        graph = new Graph(name, oriented, valued);
         this.graphMenu();
     }
 
