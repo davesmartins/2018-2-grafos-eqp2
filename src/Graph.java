@@ -147,6 +147,34 @@ public class Graph {
         return this.vertexes;
     }
 
+    public Integer isRegular() {
+        Integer degree = -1;
+        for (vertexes vertex : vertexes) {
+            if (degree == -1) {
+                degree = vertexDegree(vertex);
+
+            } else if (degree != vertexDegree(vertex)) {
+                System.out.println("Não é regular");
+                return 0;
+            }
+
+        }
+        System.out.println("É regular");
+
+        return degree;
+    }
+
+    public int isCompleto() {
+        if (isRegular() == order() - 1) {
+            System.out.println("É completo");
+            return order();
+        } else {
+            System.out.println("Não é completo");
+            return 0;
+        }
+    }
+
+
     @Override
     public String toString() {
         String s = "";
