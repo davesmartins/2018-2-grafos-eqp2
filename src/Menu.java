@@ -4,16 +4,35 @@ public class Menu {
     private Graph graph;
 
     public void createGraphMenu(){
+        String option;
         Boolean oriented;
         Boolean valued;
         Scanner scan = new Scanner(System.in);
         System.out.println("****************************** Criando Grafo ******************************");
         System.out.println("O Grafo será orientado?");
-        oriented = scan.nextBoolean();
+        option = scan.next();
+        if (option.equals("y") || option.equals("Y")){
+            oriented = true;
+        }else if (option.equals("n") || option.equals("N")){
+            oriented = false;
+        }else{
+            System.out.println("ERROR: Digite apenas y ou n");
+            return;
+        }
+
         System.out.println("O Grafo será valorado?");
-        valued = scan.nextBoolean();
+        option = scan.next();
+        if (option.equals("y") || option.equals("Y")){
+            valued = true;
+        }else if (option.equals("n") || option.equals("N")){
+            valued = false;
+        }else{
+            System.out.println("ERROR: Digite apenas y ou n");
+            return;
+        }
         System.out.println("*****************************************************************************************");
         graph = new Graph(oriented, valued);
+        this.graphMenu();
     }
 
     public void graphMenu(){
@@ -80,6 +99,10 @@ public class Menu {
                     System.out.println(graph.toString());
                     break;
 
+                case 6:
+                    this.informationMenu();
+                    break;
+
                 default:
                     System.out.println("O comando digitado NÃO existe!!!");
                     break;
@@ -92,10 +115,10 @@ public class Menu {
         System.out.println("Ordem do Grafo: " + graph.order());
         for (int i = 0; i < graph.getVertexes().size(); i++){
             if(!graph.isOriented()){
-                System.out.println("Grau do Vertice" + graph.getVertexes().get(i) + ": " + graph.vertexDegree(graph.getVertexes().get(i)));
+                System.out.println("\nGrau do Vertice '" + graph.getVertexes().get(i) + "': " + graph.vertexDegree(graph.getVertexes().get(i)));
             }else{
-                System.out.println("Grau de Entrada do Vertice" + graph.getVertexes().get(i) + ": " + graph.vertexInputDegree(graph.getVertexes().get(i)));
-                System.out.println("Grau de Saída do Vertice" + graph.getVertexes().get(i) + ": " + graph.vertexOutputDegree(graph.getVertexes().get(i)));
+                System.out.println("\nGrau de Entrada do Vertice '" + graph.getVertexes().get(i) + "': " + graph.vertexInputDegree(graph.getVertexes().get(i)));
+                System.out.println("Grau de Saída do Vertice '" + graph.getVertexes().get(i) + "': " + graph.vertexOutputDegree(graph.getVertexes().get(i)));
             }
         }
         System.out.println("*****************************************************************************************");

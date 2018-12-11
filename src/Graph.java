@@ -121,34 +121,26 @@ public class Graph {
 
     public Integer vertexInputDegree(String vertex){
         Integer degree = 0;
-        if (this.getVertexes().contains(vertex)){
-            Integer vertexIndex = this.getVertexes().indexOf(vertex);
-            ArrayList<Integer> arrayList = this.incidenceMatrix.get(vertexIndex);
-            for (Integer x: arrayList) {
-                if (x > 0){
-                    degree++;
-                }
+        Integer vertexIndex = this.getVertexes().indexOf(vertex);
+        ArrayList<Integer> arrayList = this.incidenceMatrix.get(vertexIndex);
+        for (Integer x: arrayList) {
+            if (x < 0){
+                degree++;
             }
-            return degree;
-        }else{
-            return -1;
         }
+        return degree;
     }
 
     public Integer vertexOutputDegree(String vertex){
         Integer degree = 0;
-        if (this.getVertexes().contains(vertex)){
-            Integer vertexIndex = this.getVertexes().indexOf(vertex);
-            ArrayList<Integer> arrayList = this.incidenceMatrix.get(vertexIndex);
-            for (Integer x: arrayList) {
-                if (x < 0){
-                    degree++;
-                }
+        Integer vertexIndex = this.getVertexes().indexOf(vertex);
+        ArrayList<Integer> arrayList = this.incidenceMatrix.get(vertexIndex);
+        for (Integer x: arrayList) {
+            if (x > 0){
+                degree++;
             }
-            return degree;
-        }else{
-            return -1;
         }
+        return degree;
     }
 
     public ArrayList<String> getVertexes(){

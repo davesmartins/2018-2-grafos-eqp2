@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50e907fe-9e6e-49a8-a887-fb2412fad3bf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Grafos2018/Graph.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Grafos2018/Main.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Grafos2018/Menu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graph.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -79,12 +76,12 @@
     <session id="1980660294">
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="8458" />
+          <entry key="java" value="8686" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="8458" />
+          <entry key="JAVA" value="8686" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -231,8 +228,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+            <state relative-caret-position="51">
+              <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -240,8 +237,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Graph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="129" column="17" selection-start-line="129" selection-start-column="17" selection-end-line="129" selection-end-column="17" />
+            <state relative-caret-position="646">
+              <caret line="167" column="1" lean-forward="true" selection-start-line="167" selection-start-column="1" selection-end-line="167" selection-end-column="1" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#145#165#0" expanded="true" />
@@ -254,6 +251,9 @@
                 <element signature="method#deleteVertex#0;class#Graph#0" />
                 <element signature="method#deleteEdge#0;class#Graph#0" />
                 <element signature="method#deleteEdge#1;class#Graph#0" />
+                <element signature="method#vertexDegree#0;class#Graph#0" />
+                <element signature="method#vertexInputDegree#0;class#Graph#0" />
+                <element signature="method#vertexOutputDegree#0;class#Graph#0" />
                 <element signature="method#toString#0;class#Graph#0" />
               </folding>
             </state>
@@ -263,8 +263,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Menu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="97" column="49" selection-start-line="97" selection-start-column="49" selection-end-line="97" selection-end-column="49" />
+            <state relative-caret-position="272">
+              <caret line="119" column="38" selection-start-line="119" selection-start-column="38" selection-end-line="119" selection-end-column="38" />
               <folding>
                 <element signature="method#createGraphMenu#0;class#Menu#0" />
                 <element signature="method#graphMenu#0;class#Menu#0" />
@@ -407,12 +407,12 @@
       <workItem from="1544463950605" duration="412000" />
       <workItem from="1541277545795" duration="3942000" />
       <workItem from="1544450050380" duration="1603000" />
-      <workItem from="1544549734213" duration="762000" />
+      <workItem from="1544549734213" duration="2430000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84896000" />
+    <option name="totallyTimeSpent" value="86564000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -428,7 +428,7 @@
       <window_info id="Favorites" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4993094" weight="0.80911064" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4993094" weight="0.89361703" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -500,15 +500,15 @@
     <entry file="file://$PROJECT_DIR$/src/Vertex.java" />
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="25" selection-start-line="4" selection-start-column="25" selection-end-line="4" selection-end-column="25" />
+        <state relative-caret-position="51">
+          <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Graph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="129" column="17" selection-start-line="129" selection-start-column="17" selection-end-line="129" selection-end-column="17" />
+        <state relative-caret-position="646">
+          <caret line="167" column="1" lean-forward="true" selection-start-line="167" selection-start-column="1" selection-end-line="167" selection-end-column="1" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#145#165#0" expanded="true" />
@@ -521,6 +521,9 @@
             <element signature="method#deleteVertex#0;class#Graph#0" />
             <element signature="method#deleteEdge#0;class#Graph#0" />
             <element signature="method#deleteEdge#1;class#Graph#0" />
+            <element signature="method#vertexDegree#0;class#Graph#0" />
+            <element signature="method#vertexInputDegree#0;class#Graph#0" />
+            <element signature="method#vertexOutputDegree#0;class#Graph#0" />
             <element signature="method#toString#0;class#Graph#0" />
           </folding>
         </state>
@@ -528,8 +531,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Menu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="97" column="49" selection-start-line="97" selection-start-column="49" selection-end-line="97" selection-end-column="49" />
+        <state relative-caret-position="272">
+          <caret line="119" column="38" selection-start-line="119" selection-start-column="38" selection-end-line="119" selection-end-column="38" />
           <folding>
             <element signature="method#createGraphMenu#0;class#Menu#0" />
             <element signature="method#graphMenu#0;class#Menu#0" />
