@@ -31,8 +31,8 @@ public class Graph {
 
     public void addEdge(String start, String end, Integer cost, String edge) {
         if (this.vertexes.contains(start) && this.vertexes.contains(end) && cost > 0 && !this.edges.contains(edge)) {
-            Integer startIndex = this.vertexes.indexOf(start);
-            Integer endIndex = this.vertexes.indexOf(end);
+            int startIndex = this.vertexes.indexOf(start);
+            int endIndex = this.vertexes.indexOf(end);
             for (ArrayList<Integer> a : this.incidenceMatrix) {
                 a.add(0);
             }
@@ -56,13 +56,14 @@ public class Graph {
 
     public void deleteVertex(String vertex){
         if(this.vertexes.contains(vertex)){
-           Integer vertexIndex = this.vertexes.indexOf(vertex);
+           int vertexIndex = this.vertexes.indexOf(vertex);
            this.vertexes.remove(vertexIndex);
            for (int i = 0; i < this.incidenceMatrix.get(vertexIndex).size(); i++){
                if (this.incidenceMatrix.get(vertexIndex).get(i) > 0){
                    this.deleteEdge(i);
                }
            }
+           this.incidenceMatrix.remove(vertexIndex);
         }else {
             System.out.println("ERROR: Não existe um Vértice com esse nome!!");
             System.out.println("ERROR: Aborting!!!");
@@ -121,7 +122,7 @@ public class Graph {
 
     public Integer vertexInputDegree(String vertex){
         Integer degree = 0;
-        Integer vertexIndex = this.getVertexes().indexOf(vertex);
+        int vertexIndex = this.getVertexes().indexOf(vertex);
         ArrayList<Integer> arrayList = this.incidenceMatrix.get(vertexIndex);
         for (Integer x: arrayList) {
             if (x < 0){
@@ -133,7 +134,7 @@ public class Graph {
 
     public Integer vertexOutputDegree(String vertex){
         Integer degree = 0;
-        Integer vertexIndex = this.getVertexes().indexOf(vertex);
+        int vertexIndex = this.getVertexes().indexOf(vertex);
         ArrayList<Integer> arrayList = this.incidenceMatrix.get(vertexIndex);
         for (Integer x: arrayList) {
             if (x > 0){
@@ -150,7 +151,7 @@ public class Graph {
     @Override
     public String toString() {
         String s = "";
-        Integer index = 0;
+        int index = 0;
         for (ArrayList<Integer> a : this.incidenceMatrix) {
             for (Integer i : a) {
                 if (i > 0) {
