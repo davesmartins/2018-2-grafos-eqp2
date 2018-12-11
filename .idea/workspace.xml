@@ -2,6 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50e907fe-9e6e-49a8-a887-fb2412fad3bf" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Grafos2018/Graph.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Grafos2018/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Grafos2018/Menu.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Graph.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Graph.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -220,6 +225,25 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-303853767">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.6" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="java" value="18" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="JAVA" value="18" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -235,23 +259,24 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Graph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
-              <caret line="56" column="43" selection-start-line="56" selection-start-column="43" selection-end-line="56" selection-end-column="43" />
+            <state relative-caret-position="43">
+              <caret line="152" column="34" selection-start-line="152" selection-start-column="34" selection-end-line="152" selection-end-column="34" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#145#165#0" expanded="true" />
                 <element signature="e#215#223#0" expanded="true" />
                 <element signature="e#270#278#0" expanded="true" />
                 <element signature="method#Graph#0;class#Graph#0" />
-                <element signature="method#addVertex#0;class#Graph#0" />
                 <element signature="e#787#796#0" expanded="true" />
                 <element signature="method#addEdge#0;class#Graph#0" />
-                <element signature="method#deleteVertex#0;class#Graph#0" />
-                <element signature="method#deleteEdge#0;class#Graph#0" />
-                <element signature="method#deleteEdge#1;class#Graph#0" />
-                <element signature="method#vertexDegree#0;class#Graph#0" />
-                <element signature="method#vertexInputDegree#0;class#Graph#0" />
-                <element signature="method#vertexOutputDegree#0;class#Graph#0" />
+                <element signature="e#3739#3740#0" expanded="true" />
+                <element signature="e#3773#3774#0" expanded="true" />
+                <element signature="e#3807#3808#0" expanded="true" />
+                <element signature="e#3843#3844#0" expanded="true" />
+                <element signature="e#3872#3873#0" expanded="true" />
+                <element signature="e#3915#3916#0" expanded="true" />
+                <element signature="e#5177#5178#0" expanded="true" />
+                <element signature="e#5213#5214#0" expanded="true" />
                 <element signature="method#toString#0;class#Graph#0" />
               </folding>
             </state>
@@ -261,10 +286,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Menu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="100" selection-start-line="100" selection-end-line="100" />
+            <state relative-caret-position="-95">
+              <caret line="77" column="13" selection-start-line="77" selection-start-column="13" selection-end-line="77" selection-end-column="13" />
               <folding>
-                <element signature="method#informationMenu#0;class#Menu#0" />
+                <element signature="method#createGraphMenu#0;class#Menu#0" />
               </folding>
             </state>
           </provider>
@@ -313,17 +338,18 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="1936" />
-    <option name="height" value="1056" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="274" />
+    <option name="y" value="161" />
+    <option name="width" value="1329" />
+    <option name="height" value="803" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -335,15 +361,13 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1541281711738" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544450031108" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544556563468" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -405,16 +429,18 @@
       <workItem from="1541277545795" duration="3942000" />
       <workItem from="1544450050380" duration="1603000" />
       <workItem from="1544549734213" duration="6393000" />
+      <workItem from="1544556593950" duration="832000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="90527000" />
+    <option name="totallyTimeSpent" value="91394000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <frame x="274" y="161" width="1329" height="803" extended-state="1" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.15885022" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24349882" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -485,15 +511,10 @@
     <entry file="file://$PROJECT_DIR$/src/Grafo.java" />
     <entry file="file://$PROJECT_DIR$/src/Vertice.java" />
     <entry file="file://$PROJECT_DIR$/src/Aresta.java" />
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/Object.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="234" column="18" selection-start-line="234" selection-start-column="18" selection-end-line="234" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/lang/Object.java" />
     <entry file="file://$PROJECT_DIR$/src/Edge.java" />
     <entry file="file://$PROJECT_DIR$/src/Vertex.java" />
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/io/FileInputStream.java" />
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -501,42 +522,36 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_181/src.zip!/java/io/FileInputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="31">
-          <caret line="218" column="23" selection-start-line="218" selection-start-column="23" selection-end-line="218" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Menu.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="100" selection-start-line="100" selection-end-line="100" />
+        <state relative-caret-position="-95">
+          <caret line="77" column="13" selection-start-line="77" selection-start-column="13" selection-end-line="77" selection-end-column="13" />
           <folding>
-            <element signature="method#informationMenu#0;class#Menu#0" />
+            <element signature="method#createGraphMenu#0;class#Menu#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Graph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="56" column="43" selection-start-line="56" selection-start-column="43" selection-end-line="56" selection-end-column="43" />
+        <state relative-caret-position="43">
+          <caret line="152" column="34" selection-start-line="152" selection-start-column="34" selection-end-line="152" selection-end-column="34" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#145#165#0" expanded="true" />
             <element signature="e#215#223#0" expanded="true" />
             <element signature="e#270#278#0" expanded="true" />
             <element signature="method#Graph#0;class#Graph#0" />
-            <element signature="method#addVertex#0;class#Graph#0" />
             <element signature="e#787#796#0" expanded="true" />
             <element signature="method#addEdge#0;class#Graph#0" />
-            <element signature="method#deleteVertex#0;class#Graph#0" />
-            <element signature="method#deleteEdge#0;class#Graph#0" />
-            <element signature="method#deleteEdge#1;class#Graph#0" />
-            <element signature="method#vertexDegree#0;class#Graph#0" />
-            <element signature="method#vertexInputDegree#0;class#Graph#0" />
-            <element signature="method#vertexOutputDegree#0;class#Graph#0" />
+            <element signature="e#3739#3740#0" expanded="true" />
+            <element signature="e#3773#3774#0" expanded="true" />
+            <element signature="e#3807#3808#0" expanded="true" />
+            <element signature="e#3843#3844#0" expanded="true" />
+            <element signature="e#3872#3873#0" expanded="true" />
+            <element signature="e#3915#3916#0" expanded="true" />
+            <element signature="e#5177#5178#0" expanded="true" />
+            <element signature="e#5213#5214#0" expanded="true" />
             <element signature="method#toString#0;class#Graph#0" />
           </folding>
         </state>

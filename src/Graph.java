@@ -150,7 +150,7 @@ public class Graph {
 
     public Integer isRegular() {
         Integer degree = -1;
-        for (vertexes vertex : vertexes) {
+        for (String vertex : vertexes) {
             if (degree == -1) {
                 degree = vertexDegree(vertex);
 
@@ -165,7 +165,7 @@ public class Graph {
         return degree;
     }
 
-    public int isCompleto() {
+    public int isComplete() {
         if (isRegular() == order() - 1) {
             System.out.println("É completo");
             return order();
