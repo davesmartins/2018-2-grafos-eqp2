@@ -91,7 +91,12 @@ public class Menu {
         System.out.println("****************************** Informações do Grafo ******************************");
         System.out.println("Ordem do Grafo: " + graph.order());
         for (int i = 0; i < graph.getVertexes().size(); i++){
-            System.out.println("Grau do Vertice" + graph.getVertexes().get(i) + ": " + graph.order());
+            if(!graph.isOriented()){
+                System.out.println("Grau do Vertice" + graph.getVertexes().get(i) + ": " + graph.vertexDegree(graph.getVertexes().get(i)));
+            }else{
+                System.out.println("Grau de Entrada do Vertice" + graph.getVertexes().get(i) + ": " + graph.vertexInputDegree(graph.getVertexes().get(i)));
+                System.out.println("Grau de Saída do Vertice" + graph.getVertexes().get(i) + ": " + graph.vertexOutputDegree(graph.getVertexes().get(i)));
+            }
         }
         System.out.println("*****************************************************************************************");
     }
