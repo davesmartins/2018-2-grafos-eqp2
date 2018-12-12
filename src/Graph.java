@@ -9,13 +9,13 @@ public class Graph {
     Boolean oriented;
     Boolean valued;
 
-    public Graph (String name, Boolean oriented, Boolean valued){
+    public Graph(String name, Boolean oriented, Boolean valued) {
         this.name = name;
         this.oriented = oriented;
         this.valued = valued;
     }
 
-    public String getName(){
+    public String getName() {
         return this.name;
     }
 
@@ -37,7 +37,7 @@ public class Graph {
 
     public void addEdge(String start, String end, Integer cost, String name) {
         for (Edge e : this.getEdges()) {
-            if (e.getName().equals(name)){
+            if (e.getName().equals(name)) {
                 System.out.println("ERROR: Lembre-se, Arestas precisam ter nomes diferentes!!!!!");
                 System.out.println("ERROR: Aborting!!!");
                 return;
@@ -54,16 +54,16 @@ public class Graph {
             this.incidenceMatrix.get(startIndex).remove(this.incidenceMatrix.get(startIndex).size() - 1);
             this.incidenceMatrix.get(endIndex).remove(this.incidenceMatrix.get(endIndex).size() - 1);
             this.incidenceMatrix.get(startIndex).add(cost);
-            if (this.isOriented()){
+            if (this.isOriented()) {
                 this.incidenceMatrix.get(endIndex).add(-cost);
-            }else{
+            } else {
                 this.incidenceMatrix.get(endIndex).add(cost);
             }
 
             Edge edge = new Edge(name, start, end, cost);
             this.getEdges().add(edge);
-        }else{
-            if (this.isValued()){
+        } else {
+            if (this.isValued()) {
                 System.out.println("ERROR: O custo DEVE ser MAIOR que 0(zero)!!!!");
             }
             System.out.println("ERROR: O nome dos vertices podem estar errados, certifique-se de colocar cada caracter igual ao nome do vertice!!");
@@ -71,91 +71,91 @@ public class Graph {
         }
     }
 
-    public void deleteVertex(String vertex){
-        if(this.vertexes.contains(vertex)){
-           int vertexIndex = this.vertexes.indexOf(vertex);
-           this.vertexes.remove(vertexIndex);
-           for (int i = 0; i < this.incidenceMatrix.get(vertexIndex).size(); i++){
-               if (this.incidenceMatrix.get(vertexIndex).get(i) != 0){
-                   this.deleteEdge(this.edges.get(i));
-                   i=-1;
-               }
-           }
-           this.incidenceMatrix.remove(vertexIndex);
-        }else {
+    public void deleteVertex(String vertex) {
+        if (this.vertexes.contains(vertex)) {
+            int vertexIndex = this.vertexes.indexOf(vertex);
+            this.vertexes.remove(vertexIndex);
+            for (int i = 0; i < this.incidenceMatrix.get(vertexIndex).size(); i++) {
+                if (this.incidenceMatrix.get(vertexIndex).get(i) != 0) {
+                    this.deleteEdge(this.edges.get(i));
+                    i = -1;
+                }
+            }
+            this.incidenceMatrix.remove(vertexIndex);
+        } else {
             System.out.println("ERROR: Não existe um Vértice com esse nome!!");
             System.out.println("ERROR: Aborting!!!");
             return;
         }
     }
 
-    public void deleteEdge(Edge edge){
-        if(edge != null){
+    public void deleteEdge(Edge edge) {
+        if (edge != null) {
             int edgeIndex = this.edges.indexOf(edge);
             this.edges.remove(edgeIndex);
-            for(int i = 0; i < this.incidenceMatrix.size(); i++){
+            for (int i = 0; i < this.incidenceMatrix.size(); i++) {
                 this.incidenceMatrix.get(i).remove(edgeIndex);
             }
-        }else {
+        } else {
             System.out.println("ERROR: Não existe uma Aresta com esse nome!!");
             System.out.println("ERROR: Aborting!!!");
             return;
         }
     }
 
-    public Boolean isValued(){
+    public Boolean isValued() {
         return this.valued;
     }
 
-    public Boolean isOriented(){
+    public Boolean isOriented() {
         return this.oriented;
     }
 
-    public Integer order(){
+    public Integer order() {
         return this.vertexes.size();
     }
 
-    public Integer vertexDegree(String vertex){
+    public Integer vertexDegree(String vertex) {
         Integer degree = 0;
-        if (this.getVertexes().contains(vertex)){
+        if (this.getVertexes().contains(vertex)) {
             Integer vertexIndex = this.getVertexes().indexOf(vertex);
             ArrayList<Integer> arrayList = this.incidenceMatrix.get(vertexIndex);
-            for (Integer x: arrayList) {
-                if (x != 0){
+            for (Integer x : arrayList) {
+                if (x != 0) {
                     degree++;
                 }
             }
             return degree;
-        }else{
+        } else {
             return -1;
         }
     }
 
-    public Integer vertexInputDegree(String vertex){
+    public Integer vertexInputDegree(String vertex) {
         Integer degree = 0;
         int vertexIndex = this.getVertexes().indexOf(vertex);
         ArrayList<Integer> arrayList = this.incidenceMatrix.get(vertexIndex);
-        for (Integer x: arrayList) {
-            if (x < 0){
+        for (Integer x : arrayList) {
+            if (x < 0) {
                 degree++;
             }
         }
         return degree;
     }
 
-    public Integer vertexOutputDegree(String vertex){
+    public Integer vertexOutputDegree(String vertex) {
         Integer degree = 0;
         int vertexIndex = this.getVertexes().indexOf(vertex);
         ArrayList<Integer> arrayList = this.incidenceMatrix.get(vertexIndex);
-        for (Integer x: arrayList) {
-            if (x > 0){
+        for (Integer x : arrayList) {
+            if (x > 0) {
                 degree++;
             }
         }
         return degree;
     }
 
-    public ArrayList<String> getVertexes(){
+    public ArrayList<String> getVertexes() {
         return this.vertexes;
     }
 
@@ -184,15 +184,15 @@ public class Graph {
         }
     }
 
-    public ArrayList<Edge> getEdges(){
+    public ArrayList<Edge> getEdges() {
         return this.edges;
     }
 
-    public Edge getEdge(String name){
+    public Edge getEdge(String name) {
         Edge edge = null;
 
-        for (Edge e : this.getEdges()){
-            if (e.getName().equals(name)){
+        for (Edge e : this.getEdges()) {
+            if (e.getName().equals(name)) {
                 edge = e;
             }
         }
@@ -202,17 +202,21 @@ public class Graph {
 
     @Override
     public String toString() {
-        String s = "";
+        String s = "\t";
         int index = 0;
+        for (Edge edge : this.getEdges()) {
+            s += "| " + edge.getName() + "\t";
+        }
+        s += "\n";
         for (ArrayList<Integer> a : this.incidenceMatrix) {
+            s += " " + this.vertexes.get(index) + "\t";
             for (Integer i : a) {
-                if (i > 0) {
-                    s += "   " + i + "|";
+                if (i < 0) {
+                    s += "|" + i + "\t";
                 } else {
-                    s += "  " + i + "|";
+                    s += "| " + i + "\t";
                 }
             }
-            s += "  " + this.vertexes.get(index);
             index++;
             s += "\n";
         }
