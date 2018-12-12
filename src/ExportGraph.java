@@ -23,21 +23,33 @@ public class ExportGraph {
             graphDot += vertex + ";\n";
         }
 
-        for (String edge : graph.getEdges()){
-            int edgeIndex = graph.getEdges().indexOf(edge);
+        for (Edge edge: graph.getEdges()){
             if (graph.isValued()){
-                aux = " [label = \"" + graph.getEdgesCost().get(edgeIndex) + "\", name = \"" + edge + "\" ];";
+                aux = " [label = \"" + edge.getCost() + "\", name = \"" + edge.getName() + "\" ];\n";
             }else{
-                aux = " [name = \"" + edge + "\" ];";
+                aux = " [name = \"" + edge.getName() + "\" ];\n";
             }
 
             if (graph.isOriented()){
-                graphDot += " " + aresta.getInicio().getId() + " -> " + aresta.getFim().getId() + aux;
-            }else {
-                graphDot += " " + aresta.getInicio().getId() + " -- " + aresta.getFim().getId() + aux;
+                graphDot += " " + edge.getStartVertex() + " -> " + edge.getEndVertex() + aux;
+            }else{
+                graphDot += " " + edge.getStartVertex() + " -- " + edge.getEndVertex() + aux;
             }
         }
 
+        graphDot += "}";
+
         return graphDot;
+    }
+
+    public void exportationGraph(String graph){
+        String filename = this.graph.getName() + ".png";
+
+        GraphView gv = new GraphView();
+        gv.readString(graph);
+        System.out.println(gv.getDotSource());
+
+        File out = new File(filename);
+        gv.writeGraphToFile(out);
     }
 }
