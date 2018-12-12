@@ -1,6 +1,8 @@
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Dijkstra {
 
@@ -16,6 +18,7 @@ public class Dijkstra {
 
     String verticeCaminho;
 
+    Map<String,Integer> distancia = new HashMap<String,Integer>();
 
     String atual;
 
@@ -27,26 +30,24 @@ public class Dijkstra {
     public List<String> encontrarMenorCaminhoDijkstra(Graph graph, String v1,
                                                        String v2) {
 
-        // Adiciona a origem na lista do menor caminho
         menorCaminho.add(v1);
 
         // Colocando a distancias iniciais
-        for (int i = 0; i < grafo.getVertices().size(); i++) {
+        for (int i = 0; i < graph.getVertexes().size(); i++) {
 
             // String atual tem distancia zero, e todos os outros,
             // 9999("infinita")
-            if (grafo.getVertices().get(i).getDescricao()
-                    .equals(v1.getDescricao())) {
+            if (graph.getVertexes().get(i).equals(v1)) {
 
-                grafo.getVertices().get(i).setDistancia(0);
+                distancia.put(graph.getVertexes().get(i),0);
 
             } else {
 
-                grafo.getVertices().get(i).setDistancia(9999);
+                distancia.put(graph.getVertexes().get(i),9999);
 
             }
             // Insere o vertice na lista de vertices nao visitados
-            this.naoVisitados.add(grafo.getVertices().get(i));
+            this.naoVisitados.add(graph.getVertexes().get(i));
         }
 
         Collections.sort(naoVisitados);
@@ -107,14 +108,10 @@ public class Dijkstra {
                 }
 
             }
-            // Marca o vertice atual como visitado e o retira da lista de nao
-            // visitados
+
             atual.visitar();
             this.naoVisitados.remove(atual);
-            /*
-             * Ordena a lista, para que o vertice com menor distancia fique na
-             * primeira posicao
-             */
+
 
             Collections.sort(naoVisitados);
             System.out.println("Nao foram visitados ainda:"+naoVisitados);
