@@ -24,7 +24,10 @@ public class Dijkstra {
 
     public ArrayList<Integer> findSmallerPathDijkstra(Graph graph, String startVertex) {
 
-        this.distance = new ArrayList<Integer>(graph.getVertexes().size());
+        this.distance = new ArrayList<Integer>();
+        for (int i = 0; i < graph.getVertexes().size(); i++){
+            distance.add(0);
+        }
         this.notVisited = graph.getVertexes();
         this.current = startVertex;
         Integer value = 0;

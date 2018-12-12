@@ -243,7 +243,7 @@ public class Graph {
         return neighbors;
     }
 
-    public void dfs(String vertex){
+   /* public void dfs(String vertex){
         ArrayList<String> vertexes = getVertexes(); //Pega todos os vértices do grafo
         ArrayList<Boolean> visited = new ArrayList<Boolean>; //Cria lista de Boolean para saber se já foi visitado ou não
          int vertexIndex = 0;
@@ -256,7 +256,7 @@ public class Graph {
         visited.set(vertexIndex,true);
 
 
-    }
+    }*/
 
     @Override
     public String toString() {
