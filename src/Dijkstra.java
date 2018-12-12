@@ -13,7 +13,7 @@ public class Dijkstra {
         path = this.distance.get(distanceIndex);
         for (String neighbor : neighbors){
             for (Edge edge : graph.getEdges()){
-                if (edge.getStarVertex().equals(this.current) && edge.getEndVertex().equals(neighbor)){
+                if (edge.getStartVertex().equals(this.current) && edge.getEndVertex().equals(neighbor)){
                     Integer cost = edge.getCost();
                     int neighborIndex = graph.getVertexes().indexOf(neighbor);
                     if (cost < path.get(neighborIndex)){
@@ -30,12 +30,12 @@ public class Dijkstra {
         for (int i = 0; i < graph.getVertexes().size(); i++) {
             int vertexIndex;
             if (graph.getVertexes().get(i).equals(startVertex)) {
-                vertexIndex = graph.getVertexes.indexOf(startVertex);
+                vertexIndex = graph.getVertexes().indexOf(startVertex);
                 x.set(vertexIndex, 0);
             } else {
-                vertexIndex = graph.getVertexes.indexOf(graph.getVertexes().get(i));
+                vertexIndex = graph.getVertexes().indexOf(graph.getVertexes().get(i));
                 x.set(vertexIndex, 9999);
-                this.naoVisitados.add(grafo.getVertices().get(i));
+                this.notVisited.add(graph.getVertices().get(i));
             }
         }
         distance.add(x);
@@ -44,8 +44,8 @@ public class Dijkstra {
         while (!this.notVisited.isEmpty()) {
             fillPathDijkstra(graph, graph.getNeighbors(current), distanceIndex);
             // Falta colocar distanceIndex++ e alterar o current
-            System.out.println("Nao foram visitados ainda:"+naoVisitados);
+            System.out.println("Nao foram visitados ainda:"+notVisited);
         }
-        return menorCaminho;
+        return smallerPath;
     }
 }
