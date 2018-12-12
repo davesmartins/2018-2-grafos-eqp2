@@ -63,7 +63,9 @@ public class Graph {
             Edge edge = new Edge(name, start, end, cost);
             this.getEdges().add(edge);
         }else{
-            System.out.println("ERROR: O custo DEVE ser MAIOR que 0(zero)!!!!");
+            if (this.isValued()){
+                System.out.println("ERROR: O custo DEVE ser MAIOR que 0(zero)!!!!");
+            }
             System.out.println("ERROR: O nome dos vertices podem estar errados, certifique-se de colocar cada caracter igual ao nome do vertice!!");
             System.out.println("ERROR: Aborting!!!");
         }
@@ -74,7 +76,7 @@ public class Graph {
            int vertexIndex = this.vertexes.indexOf(vertex);
            this.vertexes.remove(vertexIndex);
            for (int i = 0; i < this.incidenceMatrix.get(vertexIndex).size(); i++){
-               if (this.incidenceMatrix.get(vertexIndex).get(i) > 0){
+               if (this.incidenceMatrix.get(vertexIndex).get(i) != 0){
                    this.deleteEdge(this.edges.get(i));
                    i=-1;
                }
@@ -186,7 +188,7 @@ public class Graph {
         return this.edges;
     }
 
-    public Edge getEdeg(String name){
+    public Edge getEdge(String name){
         Edge edge = null;
 
         for (Edge e : this.getEdges()){
