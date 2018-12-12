@@ -12,7 +12,7 @@ public class Dijkstra {
 
     public ArrayList<String> findSmallerPathDijkstra(Graph graph, String startVertex, String endVertex) {
 
-        smallerPath.add(v1);
+        smallerPath.add(startVertex);
         ArrayList<Integer> x = new ArrayList<Integer>(graph.getVertexes().size());
 
         for (int i = 0; i < graph.getVertexes().size(); i++) {
