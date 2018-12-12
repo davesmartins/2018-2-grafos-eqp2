@@ -1,5 +1,6 @@
 import java.net.Inet4Address;
 import java.util.ArrayList;
+import java.util.List;
 
 
 public class Graph {
@@ -9,6 +10,7 @@ public class Graph {
     ArrayList<Edge> edges = new ArrayList<Edge>();
     Boolean oriented;
     Boolean valued;
+    private List<Edge> nosVisitados = new ArrayList<Edge>();
 
     public Graph(String name, Boolean oriented, Boolean valued) {
         this.name = name;
@@ -221,5 +223,34 @@ public class Graph {
             s += "\n";
         }
         return s;
+    }
+
+
+    public List<Edge> buscaProf(Edge no) {
+        List<Edge> arestasSelecionadas = new ArrayList<Edge>();
+        List<Edge> retornoArestas = new ArrayList<Edge>();
+        nosVisitados.add(no);
+        for (List<Edge> lista : incidenceMatrix) {
+            if (lista.get(0) == no) {
+                for (int i = 0; i < lista.size(); i++) {
+                    if (!nosVisitados.contains(lista.get(i))) {
+                        for (Edge ares : edges) {
+                            if ((no.getId().equals(ares.getSource()) && lista.get(i).getId().equals(ares.getTarget())) || (lista.get(i).getId().equals(ares.getSource()) && no.getId().equals(ares.getTarget()))) {
+                                for (Aresta are : buscaProf(lista.get(i))) {
+                                    arestasSelecionadas.add(are);
+                                }
+                                retornoArestas.add(ares);
+                                break;
+                            }
+                        }
+                    }
+                }
+                break;
+            }
+        }
+        for (Edge are : arestasSelecionadas) {
+            retornoArestas.add(are);
+        }
+        return retornoArestas;
     }
 }
