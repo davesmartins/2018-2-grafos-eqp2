@@ -202,6 +202,23 @@ public class Graph {
         return edge;
     }
 
+    public ArrayList<String> getNeighbors(String vertex){
+        ArrayList<String> neighbors = new ArrayList<String>(); //Criando lista com os vizinhos do vertice
+        ArrayList<Edge> lookingEdges = new ArrayList<Edge>(); //Criando lista de arestas com vertice de origem = vertex
+
+        for (Edge e : this.getEdges()){
+            if(e.getStartVertex().equals(vertex)){
+                lookingEdges.add(e);
+            }
+        }
+
+        for (Edge e : lookingEdges){
+            neighbors.add(e.getEndVertex());
+        }
+
+        return neighbors;
+    }
+
     @Override
     public String toString() {
         String s = "\t";
