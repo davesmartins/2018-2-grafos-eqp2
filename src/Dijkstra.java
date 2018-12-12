@@ -1,51 +1,57 @@
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
-
 public class Dijkstra {
-    ArrayList<String> smallerPath = new ArrayList<String>();
-    String pathVertex;
     String current;
     ArrayList<String> notVisited = new ArrayList<String>();
-    ArrayList<ArrayList<Integer>> distance = new ArrayList<ArrayList<Integer>>();
+    ArrayList<Integer> distance;
+
     public ArrayList<Integer> fillPathDijkstra(Graph graph, ArrayList<String> neighbors, int distanceIndex){
         ArrayList<Integer> path = new ArrayList<Integer>();
-        path = this.distance.get(distanceIndex);
-        for (String neighbor : neighbors){
-            for (Edge edge : graph.getEdges()){
-                if (edge.getStartVertex().equals(this.current) && edge.getEndVertex().equals(neighbor)){
-                    Integer cost = edge.getCost();
-                    int neighborIndex = graph.getVertexes().indexOf(neighbor);
-                    if (cost < path.get(neighborIndex)){
-                        path.set(neighborIndex, cost);
+        path = this.distance;
+        if (distanceIndex == 0){
+            for (String neighbor : neighbors){
+                for (Edge edge : graph.getEdges()){
+                    if (edge.getStartVertex().equals(this.current) && edge.getEndVertex().equals(neighbor)){
+                        Integer cost = edge.getCost();
+                        int neighborIndex = graph.getVertexes().indexOf(neighbor);
+                        if (cost < path.get(neighborIndex)){
+                            path.set(neighborIndex, cost);
+                        }
                     }
                 }
             }
+        }else{
+
         }
         return path;
     }
+
     public ArrayList<String> findSmallerPathDijkstra(Graph graph, String startVertex, String endVertex) {
-        smallerPath.add(startVertex);
-        ArrayList<Integer> x = new ArrayList<Integer>(graph.getVertexes().size());
+
+        distance = new ArrayList<Integer>(graph.getVertexes().size());
+        this.notVisited = graph.getVertexes();
+        current = startVertex;
+        int distanceIndex = 0;
         for (int i = 0; i < graph.getVertexes().size(); i++) {
             int vertexIndex;
             if (graph.getVertexes().get(i).equals(startVertex)) {
                 vertexIndex = graph.getVertexes().indexOf(startVertex);
-                x.set(vertexIndex, 0);
+                distance.set(vertexIndex, 0);
             } else {
                 vertexIndex = graph.getVertexes().indexOf(graph.getVertexes().get(i));
-                x.set(vertexIndex, 9999);
-                this.notVisited.add(graph.getVertices().get(i));
+                distance.set(vertexIndex, 9999);
             }
         }
-        distance.add(x);
-        current = startVertex;
-        int distanceIndex = 0;
+
         while (!this.notVisited.isEmpty()) {
             fillPathDijkstra(graph, graph.getNeighbors(current), distanceIndex);
-            // Falta colocar distanceIndex++ e alterar o current
-            System.out.println("Nao foram visitados ainda:"+notVisited);
+
+            distanceIndex++;
+            this.notVisited.remove(current);
+            //current = neighbor.get(0);
         }
+
         return smallerPath;
     }
 }
