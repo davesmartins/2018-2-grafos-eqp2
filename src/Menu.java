@@ -107,6 +107,8 @@ public class Menu {
 
                 case 6:
                     this.informationMenu();
+                    graph.isOriented();
+                    graph.isRegular();
                     break;
 
                 case 7:
