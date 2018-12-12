@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="50e907fe-9e6e-49a8-a887-fb2412fad3bf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Grafos2018/Graph.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Grafos2018/KruskalGraph$Edge.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Grafos2018/KruskalGraph$subset.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Grafos2018/KruskalGraph.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Grafos2018/Main.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Grafos2018/Menu.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Menu.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -231,19 +236,20 @@
     <session id="-303853767">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="2" />
-          <entry key="project.open.time.6" value="2" />
-          <entry key="project.opened" value="2" />
+          <entry key="project.closed" value="3" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.open.time.6" value="3" />
+          <entry key="project.opened" value="4" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="134" />
+          <entry key="java" value="162" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="134" />
+          <entry key="JAVA" value="162" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
@@ -263,7 +269,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="48">
+            <state relative-caret-position="51">
               <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
             </state>
           </provider>
@@ -272,49 +278,40 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Graph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="253">
-              <caret line="155" selection-start-line="155" selection-end-line="157" selection-end-column="5" />
+            <state relative-caret-position="2227">
+              <caret line="157" selection-start-line="157" selection-end-line="157" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#162#182#0" expanded="true" />
-                <element signature="e#232#240#0" expanded="true" />
                 <element signature="method#Graph#0;class#Graph#0" />
                 <element signature="method#addVertex#0;class#Graph#0" />
-                <element signature="e#901#910#0" expanded="true" />
-                <element signature="method#addEdge#0;class#Graph#0" />
-                <element signature="method#vertexDegree#0;class#Graph#0" />
-                <element signature="method#vertexInputDegree#0;class#Graph#0" />
-                <element signature="method#vertexOutputDegree#0;class#Graph#0" />
-                <element signature="e#5339#5340#0" expanded="true" />
-                <element signature="e#5375#5376#0" expanded="true" />
-                <element signature="method#isRegular#0;class#Graph#0" />
-                <element signature="method#isComplete#0;class#Graph#0" />
-                <element signature="method#getEdeg#0;class#Graph#0" />
+                <element signature="e#5392#5393#0" expanded="true" />
+                <element signature="e#5428#5429#0" expanded="true" />
                 <element signature="method#toString#0;class#Graph#0" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Dijkstra.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="27" column="67" lean-forward="true" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="67" />
+            <state relative-caret-position="1173">
+              <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#217#225#0" expanded="true" />
-                <element signature="e#390#398#0" expanded="true" />
+                <element signature="e#265#273#0" expanded="true" />
+                <element signature="e#354#370#0" expanded="true" />
+                <element signature="e#462#471#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Menu.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-287">
-              <caret line="5" selection-start-line="5" selection-end-line="5" />
+            <state relative-caret-position="402">
+              <caret line="110" column="38" selection-start-line="110" selection-start-column="38" selection-end-line="110" selection-end-column="38" />
               <folding>
                 <element signature="method#createGraphMenu#0;class#Menu#0" />
                 <element signature="method#informationMenu#0;class#Menu#0" />
@@ -326,7 +323,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ExportGraph.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
+            <state relative-caret-position="289">
               <caret line="20" selection-start-line="20" selection-end-line="20" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -366,9 +363,9 @@
         <option value="$PROJECT_DIR$/src/KruskalGraph.java" />
         <option value="$PROJECT_DIR$/src/Edge.java" />
         <option value="$PROJECT_DIR$/src/ExportGraph.java" />
-        <option value="$PROJECT_DIR$/src/Menu.java" />
         <option value="$PROJECT_DIR$/src/Graph.java" />
         <option value="$PROJECT_DIR$/src/Dijkstra.java" />
+        <option value="$PROJECT_DIR$/src/Menu.java" />
       </list>
     </option>
   </component>
@@ -384,9 +381,9 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="396" />
-    <option name="y" value="130" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="454" />
+    <option name="y" value="151" />
     <option name="width" value="1329" />
     <option name="height" value="788" />
   </component>
@@ -396,7 +393,6 @@
     </navigator>
     <panes>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -413,6 +409,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -496,17 +493,19 @@
       <workItem from="1544556593950" duration="832000" />
       <workItem from="1544564231404" duration="1867000" />
       <workItem from="1544572561279" duration="1762000" />
+      <workItem from="1544574688424" duration="599000" />
+      <workItem from="1544577023181" duration="662000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="103511000" />
+    <option name="totallyTimeSpent" value="104772000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="754" extended-state="6" />
+    <frame x="454" y="151" width="1329" height="788" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16111952" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.16627266" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -596,23 +595,6 @@
     <entry file="file://$PROJECT_DIR$/src/Kruskal.java" />
     <entry file="file://$PROJECT_DIR$/src/KruskalGraph.java" />
     <entry file="file://$PROJECT_DIR$/src/Edge.java" />
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="48">
-          <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ExportGraph.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="20" selection-start-line="20" selection-end-line="20" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://C:/Program Files/Java/jdk-10.0.2/lib/src.zip!/java.base/java/util/ArrayList.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="112">
@@ -620,50 +602,59 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="3" column="31" selection-start-line="3" selection-start-column="31" selection-end-line="3" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Graph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="253">
-          <caret line="155" selection-start-line="155" selection-end-line="157" selection-end-column="5" />
+        <state relative-caret-position="2227">
+          <caret line="157" selection-start-line="157" selection-end-line="157" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#162#182#0" expanded="true" />
-            <element signature="e#232#240#0" expanded="true" />
             <element signature="method#Graph#0;class#Graph#0" />
             <element signature="method#addVertex#0;class#Graph#0" />
-            <element signature="e#901#910#0" expanded="true" />
-            <element signature="method#addEdge#0;class#Graph#0" />
-            <element signature="method#vertexDegree#0;class#Graph#0" />
-            <element signature="method#vertexInputDegree#0;class#Graph#0" />
-            <element signature="method#vertexOutputDegree#0;class#Graph#0" />
-            <element signature="e#5339#5340#0" expanded="true" />
-            <element signature="e#5375#5376#0" expanded="true" />
-            <element signature="method#isRegular#0;class#Graph#0" />
-            <element signature="method#isComplete#0;class#Graph#0" />
+            <element signature="e#5392#5393#0" expanded="true" />
+            <element signature="e#5428#5429#0" expanded="true" />
             <element signature="method#getEdeg#0;class#Graph#0" />
             <element signature="method#toString#0;class#Graph#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Menu.java">
+    <entry file="file://$PROJECT_DIR$/src/ExportGraph.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-287">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
+        <state relative-caret-position="289">
+          <caret line="20" selection-start-line="20" selection-end-line="20" />
           <folding>
-            <element signature="method#createGraphMenu#0;class#Menu#0" />
-            <element signature="method#informationMenu#0;class#Menu#0" />
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Dijkstra.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="27" column="67" lean-forward="true" selection-start-line="27" selection-start-column="67" selection-end-line="27" selection-end-column="67" />
+        <state relative-caret-position="1173">
+          <caret line="72" lean-forward="true" selection-start-line="72" selection-end-line="72" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#217#225#0" expanded="true" />
-            <element signature="e#390#398#0" expanded="true" />
+            <element signature="e#265#273#0" expanded="true" />
+            <element signature="e#354#370#0" expanded="true" />
+            <element signature="e#462#471#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Menu.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="402">
+          <caret line="110" column="38" selection-start-line="110" selection-start-column="38" selection-end-line="110" selection-end-column="38" />
+          <folding>
+            <element signature="method#createGraphMenu#0;class#Menu#0" />
+            <element signature="method#informationMenu#0;class#Menu#0" />
           </folding>
         </state>
       </provider>
