@@ -107,8 +107,6 @@ public class Menu {
 
                 case 6:
                     this.informationMenu();
-                    graph.isOriented();
-                    graph.isRegular();
                     break;
 
                 case 7:
@@ -136,6 +134,8 @@ public class Menu {
         }
         System.out.println("\n");
         graph.isComplete();
+        graph.isOriented();
+        graph.isRegular();
         System.out.println("*****************************************************************************************");
     }
 }
