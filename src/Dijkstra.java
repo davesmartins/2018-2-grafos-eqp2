@@ -20,11 +20,11 @@ public class Dijkstra {
 
     Map<String,Integer> distancia = new HashMap<String,Integer>();
 
-    String atual;
+    HashMap atual;
 
     String vizinho;
 
-    List<String> naoVisitados = new ArrayList<String>();
+    List<HashMap> naoVisitados = new ArrayList<HashMap>();
 
 
     public List<String> encontrarMenorCaminhoDijkstra(Graph graph, String v1,
@@ -47,17 +47,14 @@ public class Dijkstra {
 
             }
             // Insere o vertice na lista de vertices nao visitados
-            this.naoVisitados.add(graph.getVertexes().get(i));
+            this.naoVisitados.add((HashMap) distancia);
         }
 
-        Collections.sort(naoVisitados);
 
         // O algoritmo continua ate que todos os vertices sejam visitados
         while (!this.naoVisitados.isEmpty()) {
 
-            // Toma-se sempre o vertice com menor distancia, que eh o primeiro
-            // da
-            // lista
+            // Toma-se sempre o vertice com menor distancia, que eh o primeiro da lista
 
             atual = this.naoVisitados.get(0);
             System.out.println("Pegou esse vertice:  " + atual);
@@ -109,9 +106,7 @@ public class Dijkstra {
 
             }
 
-            atual.visitar();
             this.naoVisitados.remove(atual);
-
 
             Collections.sort(naoVisitados);
             System.out.println("Nao foram visitados ainda:"+naoVisitados);
