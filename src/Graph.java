@@ -207,13 +207,27 @@ public class Graph {
         ArrayList<Edge> lookingEdges = new ArrayList<Edge>(); //Criando lista de arestas com vertice de origem = vertex
 
         for (Edge e : this.getEdges()){
-            if(e.getStartVertex().equals(vertex)){
-                lookingEdges.add(e);
+            if(this.isOriented()){
+                if(e.getStartVertex().equals(vertex)){
+                    lookingEdges.add(e);
+                }
+            }else{
+                if(e.getStartVertex().equals(vertex) || e.getEndVertex().equals(vertex)){
+                    lookingEdges.add(e);
+                }
             }
         }
 
         for (Edge e : lookingEdges){
-            neighbors.add(e.getEndVertex());
+            if(this.isOriented()){
+                neighbors.add(e.getEndVertex());
+            }else{
+                if(e.getStartVertex().equals(vertex)){
+                    neighbors.add(e.getEndVertex());
+                }else{
+                    neighbors.add(e.getStartVertex());
+                }
+            }
         }
 
         return neighbors;
