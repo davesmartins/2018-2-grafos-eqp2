@@ -1,4 +1,3 @@
-import java.net.Inet4Address;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -20,6 +19,17 @@ public class Graph {
 
     public String getName() {
         return this.name;
+    }
+
+    public ArrayList<String> getVertices() {
+
+        return this.vertexes;
+    }
+
+    public String getDescricao(){
+
+        return name;
+
     }
 
     public void addVertex(String insert) {

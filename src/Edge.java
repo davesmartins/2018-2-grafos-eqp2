@@ -4,6 +4,7 @@ public class Edge {
     private String endVertex;
     private Integer cost;
 
+
     public Edge(String name, String startVertex, String endVertex, Integer cost){
         this.name = name;
         this.startVertex = startVertex;
@@ -26,5 +27,6 @@ public class Edge {
     public Integer getCost(){
         return this.cost;
     }
+
 
 }
