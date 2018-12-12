@@ -1,8 +1,6 @@
 import java.net.Inet4Address;
 import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Stack;
+
 
 public class Graph {
     String name;
@@ -200,44 +198,6 @@ public class Graph {
             }
         }
         return edge;
-    }
-
-    public void bfs()
-    {
-        Queue queue = new LinkedList();
-        queue.add(this.edges);
-        edges(this.edges);
-        edges.visited = true;
-        while(!queue.isEmpty()) {
-            Node node = (Node)queue.remove();
-            Node child=null;
-            while((child=getUnvisitedChildNode(node))!=null) {
-                child.visited=true;
-                printNode(child);
-                queue.add(child);
-            }
-        }
-        clearNodes();
-    }
-
-    public void dfs() {
-        Stack stack = new Stack();
-        stack.push(this.edges);
-        edges(this.edges);
-        edges.visited = true;
-        while(!stack.isEmpty()) {
-            Node node = (Node)s.peek();
-            Node child = getUnvisitedChildNode(n);
-            if(child != null) {
-                child.visited = true;
-                printNode(child);
-                s.push(child);
-            }
-            else {
-                s.pop();
-            }
-        }
-        clearNodes();
     }
 
     @Override
