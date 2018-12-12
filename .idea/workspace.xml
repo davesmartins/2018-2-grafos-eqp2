@@ -76,12 +76,12 @@
     <session id="1980660294">
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="10025" />
+          <entry key="java" value="10469" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="10025" />
+          <entry key="JAVA" value="10469" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages" />
@@ -282,8 +282,6 @@
                 <element signature="method#addVertex#0;class#Graph#0" />
                 <element signature="e#901#910#0" expanded="true" />
                 <element signature="method#addEdge#0;class#Graph#0" />
-                <element signature="method#deleteVertex#0;class#Graph#0" />
-                <element signature="method#deleteEdge#0;class#Graph#0" />
                 <element signature="method#vertexDegree#0;class#Graph#0" />
                 <element signature="method#vertexInputDegree#0;class#Graph#0" />
                 <element signature="method#vertexOutputDegree#0;class#Graph#0" />
@@ -366,9 +364,9 @@
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$PROJECT_DIR$/src/Kruskal.java" />
         <option value="$PROJECT_DIR$/src/KruskalGraph.java" />
-        <option value="$PROJECT_DIR$/src/Menu.java" />
-        <option value="$PROJECT_DIR$/src/ExportGraph.java" />
         <option value="$PROJECT_DIR$/src/Edge.java" />
+        <option value="$PROJECT_DIR$/src/ExportGraph.java" />
+        <option value="$PROJECT_DIR$/src/Menu.java" />
         <option value="$PROJECT_DIR$/src/Graph.java" />
         <option value="$PROJECT_DIR$/src/Dijkstra.java" />
       </list>
@@ -443,7 +441,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.KruskalGraph">
+  <component name="RunManager" selected="Application.Main">
     <configuration name="KruskalGraph" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="KruskalGraph" />
       <module name="Grafos2018" />
@@ -464,8 +462,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.KruskalGraph" />
         <item itemvalue="Application.Main" />
+        <item itemvalue="Application.KruskalGraph" />
       </list>
     </recent_temporary>
   </component>
@@ -634,8 +632,6 @@
             <element signature="method#addVertex#0;class#Graph#0" />
             <element signature="e#901#910#0" expanded="true" />
             <element signature="method#addEdge#0;class#Graph#0" />
-            <element signature="method#deleteVertex#0;class#Graph#0" />
-            <element signature="method#deleteEdge#0;class#Graph#0" />
             <element signature="method#vertexDegree#0;class#Graph#0" />
             <element signature="method#vertexInputDegree#0;class#Graph#0" />
             <element signature="method#vertexOutputDegree#0;class#Graph#0" />
