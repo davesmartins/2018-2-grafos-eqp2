@@ -134,8 +134,6 @@ public class Menu {
         }
         System.out.println("\n");
         graph.isComplete();
-        graph.isOriented();
-        graph.isRegular();
         System.out.println("*****************************************************************************************");
     }
 }
