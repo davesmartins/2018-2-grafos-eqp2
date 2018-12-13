@@ -1,7 +1,5 @@
 import java.util.ArrayList;
 
-import static com.sun.tools.classfile.Instruction.TypeKind.get;
-
 public class Dijkstra {
     String current;
     ArrayList<String> notVisited = new ArrayList<String>();
@@ -51,11 +49,11 @@ public class Dijkstra {
             this.distance = fillPathDijkstra(graph, graph.getNeighbors(current), value);
             Integer aux = 9999;
             for (int i = 0; i < this.distance.size(); i++){
-                int indexHolder = vertexes.indexOf(get(i));
-                indexHolder++;
+                //int indexHolder = vertexes.indexOf(get(i));
+                //indexHolder++;
                 Integer cost = this.distance.get(i);
-                //String vertex = vertexes.get(i);
-                if (cost != 0 && cost < aux && this.notVisited.contains(indexHolder)){
+                String vertex = vertexes.get(i);
+                if (cost != 0 && cost < aux && this.notVisited.contains(vertexes)){
                     aux = cost;
                 }
                 if(i==this.distance.size() -1) {
