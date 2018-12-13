@@ -58,7 +58,8 @@ public class Menu {
                     "Digite 4 para Remover uma Vertice no Grafo.\n" +
                     "Digite 5 para Imprimir o Grafo em uma Matriz de Incidência.\n" +
                     "Digite 6 para Exibir o Menu de Informações do Grafo.\n" +
-                    "Digite 7 para Exportar o Grafo em um arquivo PNG.");
+                    "Digite 7 para Exportar o Grafo em um arquivo PNG." +
+                    "Digite 8 para Exibir a busca por profundidade.");
             System.out.println("*****************************************************************************************");
             System.out.println("O que você deseja fazer agora?");
             option = scan.nextInt();
@@ -114,6 +115,10 @@ public class Menu {
                     eg.exportationGraph(eg.toDotLanguage());
                     break;
 
+                case 8:
+                    graph.fillVisited();
+                    graph.depthFirstSearch(graph.getVertexes().get(0), graph.getVisited());
+                    break;
                 default:
                     System.out.println("O comando digitado NÃO existe!!!");
                     break;

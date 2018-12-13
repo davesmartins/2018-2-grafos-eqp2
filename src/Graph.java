@@ -3,12 +3,13 @@ import java.util.List;
 
 
 public class Graph {
-    String name;
-    ArrayList<ArrayList<Integer>> incidenceMatrix = new ArrayList<ArrayList<Integer>>();
-    ArrayList<String> vertexes = new ArrayList<String>();
-    ArrayList<Edge> edges = new ArrayList<Edge>();
-    Boolean oriented;
-    Boolean valued;
+    private String name;
+    private ArrayList<Boolean> visited = new ArrayList<Boolean>();
+    private ArrayList<ArrayList<Integer>> incidenceMatrix = new ArrayList<ArrayList<Integer>>();
+    private ArrayList<String> vertexes = new ArrayList<String>();
+    private ArrayList<Edge> edges = new ArrayList<Edge>();
+    private Boolean oriented;
+    private Boolean valued;
     private List<Edge> nosVisitados = new ArrayList<Edge>();
 
     public Graph(String name, Boolean oriented, Boolean valued) {
@@ -243,20 +244,28 @@ public class Graph {
         return neighbors;
     }
 
-   /* public void dfs(String vertex){
-        ArrayList<String> vertexes = getVertexes(); //Pega todos os vértices do grafo
-        ArrayList<Boolean> visited = new ArrayList<Boolean>; //Cria lista de Boolean para saber se já foi visitado ou não
-         int vertexIndex = 0;
-        for (int i = 0; i < vertexes.size(); i++){
-            visited.add(false);
-        }
-        if (this.getVertexes().contains(vertex)){
-            int vertexIndex = this.getVertexes().indexOf(vertex);
-        }
-        visited.set(vertexIndex,true);
+    public void depthFirstSearch(String vertex, ArrayList<Boolean> visited){
 
+        visited.set(this.getVertexes().indexOf(vertex), true);
+        System.out.println("Visitando Vertice: " + vertex);
 
-    }*/
+        for (String neighbor : this.getNeighbors(vertex)){
+            int index = this.getNeighbors().indexOf(neighbor);
+            if (!visited.get(index)){
+                this.depthFirstSearch(neighbor, visited);
+            }
+        }
+    }
+
+    public void fillVisited(){
+        for (int i = 0; i < this.getVertexes().size(); i++){
+            this.visited.add(false);
+        }
+    }
+
+    public ArrayList<Boolean> getVisited(){
+        return this.visited;
+    }
 
     @Override
     public String toString() {
