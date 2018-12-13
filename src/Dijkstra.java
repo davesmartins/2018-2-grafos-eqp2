@@ -58,11 +58,14 @@ public class Dijkstra {
                 if (cost != 0 && cost < aux && this.notVisited.contains(indexHolder)){
                     aux = cost;
                 }
+                if(i==this.distance.size() -1) {
+                    value = aux;
+                    this.notVisited.remove(this.current);
+                    this.current = vertexes.get(this.distance.indexOf(value));
+                }
             }
 
-            value = aux;
-            this.notVisited.remove(this.current);
-           // this.current = vertexes.get(this.distance.indexOf(value));
+
         }
 
         return this.distance;
