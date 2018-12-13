@@ -58,7 +58,7 @@ public class Menu {
                     "Digite 4 para Remover uma Vertice no Grafo.\n" +
                     "Digite 5 para Imprimir o Grafo em uma Matriz de Incidência.\n" +
                     "Digite 6 para Exibir o Menu de Informações do Grafo.\n" +
-                    "Digite 7 para Exportar o Grafo em um arquivo PNG." +
+                    "Digite 7 para Exportar o Grafo em um arquivo PNG.\n" +
                     "Digite 8 para Exibir a busca por profundidade.");
             System.out.println("*****************************************************************************************");
             System.out.println("O que você deseja fazer agora?");

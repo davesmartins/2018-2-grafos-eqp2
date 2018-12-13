@@ -250,7 +250,7 @@ public class Graph {
         System.out.println("Visitando Vertice: " + vertex);
 
         for (String neighbor : this.getNeighbors(vertex)){
-            int index = this.getNeighbors().indexOf(neighbor);
+            int index = this.getNeighbors(vertex).indexOf(neighbor);
             if (!visited.get(index)){
                 this.depthFirstSearch(neighbor, visited);
             }
@@ -266,6 +266,7 @@ public class Graph {
     public ArrayList<Boolean> getVisited(){
         return this.visited;
     }
+    
 
     @Override
     public String toString() {
