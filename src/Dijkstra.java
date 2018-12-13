@@ -43,10 +43,11 @@ public class Dijkstra {
         }
 
         while (!this.notVisited.isEmpty()) {
-            fillPathDijkstra(graph, graph.getNeighbors(current), value);
+            this.distance = fillPathDijkstra(graph, graph.getNeighbors(current), value);
             Integer aux = 9999;
-            for (Integer cost : this.distance){
-                String vertex = graph.getVertexes().get(this.distance.indexOf(cost));
+            for (int i = 0; i < this.distance.size(); i++){
+                Integer cost = this.distance.get(i);
+                String vertex = graph.getVertexes().get(i);
                 if (cost != 0 && cost < aux && this.notVisited.contains(vertex)){
                     aux = cost;
                 }
