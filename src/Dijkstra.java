@@ -1,9 +1,12 @@
 import java.util.ArrayList;
 
+import static com.sun.tools.classfile.Instruction.TypeKind.get;
+
 public class Dijkstra {
     String current;
     ArrayList<String> notVisited = new ArrayList<String>();
     ArrayList<Integer> distance;
+    ArrayList<String> vertexes;
 
     public ArrayList<Integer> fillPathDijkstra(Graph graph, ArrayList<String> neighbors, Integer value){
         ArrayList<Integer> path = new ArrayList<Integer>();
@@ -24,20 +27,22 @@ public class Dijkstra {
 
     public ArrayList<Integer> findSmallerPathDijkstra(Graph graph, String startVertex) {
 
+        vertexes = graph.getVertexes();
+
         this.distance = new ArrayList<Integer>();
-        for (int i = 0; i < graph.getVertexes().size(); i++){
+        for (int i = 0; i < vertexes.size(); i++){
             distance.add(0);
         }
-        this.notVisited = graph.getVertexes();
+        this.notVisited = vertexes;
         this.current = startVertex;
         Integer value = 0;
-        for (int i = 0; i < graph.getVertexes().size(); i++) {
+        for (int i = 0; i < vertexes.size(); i++) {
             int vertexIndex;
-            if (graph.getVertexes().get(i).equals(startVertex)) {
-                vertexIndex = graph.getVertexes().indexOf(startVertex);
+            if (vertexes.get(i).equals(startVertex)) {
+                vertexIndex = vertexes.indexOf(startVertex);
                 this.distance.set(vertexIndex, 0);
             } else {
-                vertexIndex = graph.getVertexes().indexOf(graph.getVertexes().get(i));
+                vertexIndex = vertexes.indexOf(vertexes.get(i));
                 this.distance.set(vertexIndex, 9999);
             }
         }
@@ -46,16 +51,18 @@ public class Dijkstra {
             this.distance = fillPathDijkstra(graph, graph.getNeighbors(current), value);
             Integer aux = 9999;
             for (int i = 0; i < this.distance.size(); i++){
+                int indexHolder = vertexes.indexOf(get(i));
+                indexHolder++;
                 Integer cost = this.distance.get(i);
-                String vertex = graph.getVertexes().get(i);
-                if (cost != 0 && cost < aux && this.notVisited.contains(vertex)){
+                //String vertex = vertexes.get(i);
+                if (cost != 0 && cost < aux && this.notVisited.contains(indexHolder)){
                     aux = cost;
                 }
             }
 
             value = aux;
             this.notVisited.remove(this.current);
-            this.current = graph.getVertexes().get(this.distance.indexOf(value));
+           // this.current = vertexes.get(this.distance.indexOf(value));
         }
 
         return this.distance;
